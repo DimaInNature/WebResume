@@ -1,0 +1,30 @@
+﻿@inject IConfiguration configuration
+
+<div id="home" class="section">
+
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-2"></div>
+
+			<div class="col-md-8 wow fadeIn" data-wow-delay="0.9s">
+
+				<h3>Hello I'm a @configuration[key: "User:Grade"]</h3>
+				<h1>@configuration[key: "User:Nickname"]</h1>
+
+				<h2 class="rotate">@string.Join(separator: ',',
+					value: configuration.GetSection(key: "User:Titles").Get<string[]>()))
+				</h2>
+
+				<p>@configuration[key: "User:Description"]</p>
+				<a href="#work" class="btn btn-default smoothScroll wow fadeInUp" data-wow-delay="1s">Go Go GO!</a>
+
+			</div>
+
+			<div class="col-md-2"></div>
+
+		</div>
+
+	</div>
+
+</div>
