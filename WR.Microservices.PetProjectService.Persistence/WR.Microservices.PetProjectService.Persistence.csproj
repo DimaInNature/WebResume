@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WR.Shared.Persistence\WR.Shared.Persistence.csproj" />
+  </ItemGroup>
+
 </Project>
