@@ -1,5 +1,3 @@
-using WebResume.Presentation.Configurations;
-
 var builder = WebApplication.CreateBuilder(args);
 
 RegisterServices(services: builder.Services);

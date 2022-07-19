@@ -1,4 +1,4 @@
-﻿namespace WebResume.Presentation.Controllers;
+﻿namespace WR.Consumers.Web.Presentation.Controllers;
 
 [Route(template: "Error")]
 public class ErrorController : Controller

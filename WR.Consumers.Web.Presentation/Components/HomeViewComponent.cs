@@ -1,4 +1,4 @@
-﻿namespace WebResume.Presentation.Components;
+﻿namespace WR.Consumers.Web.Presentation.Components;
 
 public class HomeViewComponent : ViewComponent
 {

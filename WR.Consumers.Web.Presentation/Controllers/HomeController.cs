@@ -1,4 +1,4 @@
-﻿namespace WebResume.Presentation.Controllers;
+﻿namespace WR.Consumers.Web.Presentation.Controllers;
 
 public class HomeController : Controller
 {
