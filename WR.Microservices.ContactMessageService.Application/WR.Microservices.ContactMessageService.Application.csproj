@@ -7,7 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
+    <PackageReference Include="MediatR" Version="10.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WR.Microservices.ContactMessageService.Domain\WR.Microservices.ContactMessageService.Domain.csproj" />
+    <ProjectReference Include="..\WR.Microservices.ContactMessageService.Persistence\WR.Microservices.ContactMessageService.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

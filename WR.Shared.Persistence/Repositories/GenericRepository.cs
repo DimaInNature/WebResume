@@ -10,12 +10,15 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity>
     public GenericRepository(DbContext context) =>
         (_context, _dbSet) = (context, _dbSet = context.Set<TEntity>());
 
-    public async Task<TEntity?> GetFirstOrDefaultAsync(Guid key) =>
-        await _dbSet.AsNoTracking().FirstOrDefaultAsync(predicate: entity => entity.Id == key);
+    public async Task<TEntity?> GetFirstOrDefaultAsync(Guid key, CancellationToken token) =>
+        await _dbSet.AsNoTracking()
+        .FirstOrDefaultAsync(predicate: entity => entity.Id == key,
+            cancellationToken: token);
 
     public async Task<TEntity?> GetFirstOrDefaultAsync(
-        Expression<Func<TEntity, bool>> predicate) =>
-        await _dbSet.AsNoTracking().FirstOrDefaultAsync(predicate);
+        Expression<Func<TEntity, bool>> predicate, CancellationToken token) =>
+        await _dbSet.AsNoTracking()
+        .FirstOrDefaultAsync(predicate, cancellationToken: token);
 
     public IEnumerable<TEntity> GetAll() => _dbSet.AsNoTracking();
 
@@ -31,16 +34,16 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity>
         params Expression<Func<TEntity, object>>[] includeProperties) =>
         Include(includeProperties).Where(predicate);
 
-    public async Task<bool> CreateAsync(TEntity entity)
+    public async Task<bool> CreateAsync(TEntity entity, CancellationToken token)
     {
         if (entity is default(TEntity) or null) return false;
 
-        await _dbSet.AddAsync(entity);
+        await _dbSet.AddAsync(entity, cancellationToken: token);
 
-        return await _context.SaveChangesAsync() == 1;
+        return await _context.SaveChangesAsync(cancellationToken: token) == 1;
     }
 
-    public async Task<bool> UpdateAsync(TEntity entity)
+    public async Task<bool> UpdateAsync(TEntity entity, CancellationToken token)
     {
         if (entity is default(TEntity) or null) return false;
 
@@ -48,21 +51,22 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity>
 
         _context.Entry(entity).State = EntityState.Modified;
 
-        return await _context.SaveChangesAsync() == 1;
+        return await _context.SaveChangesAsync(cancellationToken: token) == 1;
     }
 
-    public async Task<bool> DeleteAsync(Guid key)
+    public async Task<bool> DeleteAsync(Guid key, CancellationToken token)
     {
         if (key == Guid.Empty) return false;
 
         TEntity? entity = await _dbSet.AsNoTracking()
-            .FirstOrDefaultAsync(predicate: entity => entity.Id == key);
+            .FirstOrDefaultAsync(predicate: entity => entity.Id == key,
+            cancellationToken: token);
 
         if (entity is default(TEntity) or null) return false;
 
         _dbSet.Remove(entity);
 
-        return await _context.SaveChangesAsync() == 1;
+        return await _context.SaveChangesAsync(cancellationToken: token) == 1;
     }
 
     private IQueryable<TEntity> Include(

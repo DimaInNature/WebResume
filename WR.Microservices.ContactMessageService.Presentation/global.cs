@@ -1,0 +1,17 @@
+﻿global using MediatR;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.OpenApi.Models;
+global using System.Reflection;
+global using WR.Microservices.ContactMessageService.Application.Interfaces;
+global using WR.Microservices.ContactMessageService.Application.Services;
+global using WR.Microservices.ContactMessageService.Domain.Commands;
+global using WR.Microservices.ContactMessageService.Domain.Queries;
+global using WR.Microservices.ContactMessageService.Infra.IoC;
+global using WR.Microservices.ContactMessageService.Persistence.Databases;
+global using WR.Microservices.ContactMessageService.Persistence.Entities;
+global using WR.Microservices.ContactMessageService.Presentation.Configurations;
+global using WR.Microservices.ContactMessageService.Presentation.Configurations.MediatR;
+global using WR.Microservices.ContactMessageService.Presentation.Configurations.MediatR.Profiles;
+global using WR.Shared.Persistence.Interfaces;
+global using WR.Shared.Persistence.Repositories;

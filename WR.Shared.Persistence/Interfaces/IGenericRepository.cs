@@ -3,10 +3,11 @@
 public interface IGenericRepository<TEntity>
     where TEntity : class, IDatabaseEntity
 {
-    public Task<TEntity?> GetFirstOrDefaultAsync(Guid key);
+    public Task<TEntity?> GetFirstOrDefaultAsync(Guid key, CancellationToken token);
 
     public Task<TEntity?> GetFirstOrDefaultAsync(
-        Expression<Func<TEntity, bool>> predicate);
+        Expression<Func<TEntity, bool>> predicate,
+        CancellationToken token);
 
     public IEnumerable<TEntity> GetAll();
 
@@ -19,9 +20,9 @@ public interface IGenericRepository<TEntity>
         Func<TEntity, bool> predicate,
         params Expression<Func<TEntity, object>>[] includeProperties);
 
-    public Task<bool> CreateAsync(TEntity entity);
+    public Task<bool> CreateAsync(TEntity entity, CancellationToken token);
 
-    public Task<bool> UpdateAsync(TEntity entity);
+    public Task<bool> UpdateAsync(TEntity entity, CancellationToken token);
 
-    public Task<bool> DeleteAsync(Guid key);
+    public Task<bool> DeleteAsync(Guid key, CancellationToken token);
 }
