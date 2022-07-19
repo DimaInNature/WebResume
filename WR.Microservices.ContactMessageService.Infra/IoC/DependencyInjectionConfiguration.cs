@@ -6,7 +6,7 @@ public static class DependencyInjectionConfiguration
     {
         _ = services ?? throw new ArgumentNullException(paramName: nameof(services));
 
-        services.AddSharedPersistence();
+        services.AddTransient<IGenericRepository<ContactMessageEntity>, GenericRepository<ContactMessageEntity>>();
 
         services.AddTransient<IContactMessageAppService, ContactMessageAppService>();
     }
