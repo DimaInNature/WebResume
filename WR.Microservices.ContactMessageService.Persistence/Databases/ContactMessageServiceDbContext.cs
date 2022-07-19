@@ -1,10 +1,10 @@
-﻿namespace WR.Microservices.MailService.Persistence.Databases;
+﻿namespace WR.Microservices.ContactMessageService.Persistence.Databases;
 
-public sealed class MailServiceDbContext : DbContext
+public sealed class ContactMessageServiceDbContext : DbContext
 {
     public DbSet<ContactMessageEntity> ContactMessages => Set<ContactMessageEntity>();
 
-    public MailServiceDbContext(DbContextOptions<MailServiceDbContext> options)
+    public ContactMessageServiceDbContext(DbContextOptions<ContactMessageServiceDbContext> options)
        : base(options) => Database.EnsureCreated();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

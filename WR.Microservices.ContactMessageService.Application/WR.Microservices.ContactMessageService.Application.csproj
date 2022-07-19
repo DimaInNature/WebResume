@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WR.Shared.Persistence\WR.Shared.Persistence.csproj" />
+    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>

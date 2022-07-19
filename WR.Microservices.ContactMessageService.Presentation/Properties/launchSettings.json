@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "WR.Microservices.MailService.Presentation": {
+    "WR.Microservices.ContactMessageService.Presentation": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",
@@ -8,7 +8,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "dotnetRunMessages": true,
-      "applicationUrl": "https://localhost:7067;http://localhost:5067"
+      "applicationUrl": "https://localhost:7040;http://localhost:5041"
     },
     "IIS Express": {
       "commandName": "IISExpress",
@@ -31,8 +31,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:15624",
-      "sslPort": 44322
+      "applicationUrl": "http://localhost:9640",
+      "sslPort": 44313
     }
   }
 }

@@ -7,7 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WR.Microservices.MailService.Persistence\WR.Microservices.MailService.Persistence.csproj" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WR.Shared.Persistence\WR.Shared.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

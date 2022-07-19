@@ -1,4 +1,4 @@
-﻿namespace WR.Microservices.MailService.Persistence.Entities;
+﻿namespace WR.Microservices.ContactMessageService.Persistence.Entities;
 
 public class ContactMessageEntity : IDatabaseEntity
 {
