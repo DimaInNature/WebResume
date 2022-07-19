@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WR.Microservices.MailService.Persistence\WR.Microservices.MailService.Persistence.csproj" />
+  </ItemGroup>
+
 </Project>
