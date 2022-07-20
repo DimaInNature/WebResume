@@ -1,10 +1,10 @@
 ﻿namespace WR.Microservices.PetProjectService.Persistence.Databases;
 
-public class ProjectServiceDbContext : DbContext
+public class PetProjectServiceDbContext : DbContext
 {
     public DbSet<PetProjectEntity> ContactMessages => Set<PetProjectEntity>();
 
-    public ProjectServiceDbContext(DbContextOptions<ProjectServiceDbContext> options)
+    public PetProjectServiceDbContext(DbContextOptions<PetProjectServiceDbContext> options)
        : base(options) => Database.EnsureCreated();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
