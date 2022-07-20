@@ -62,29 +62,53 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.1 - Persistence", "3.1 - 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WR.Shared.Persistence", "WR.Shared.Persistence\WR.Shared.Persistence.csproj", "{C6F27A28-5EB0-4D47-97C9-03047432B65B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WR.Consumers.Web.Presentation", "WR.Consumers.Web.Presentation\WR.Consumers.Web.Presentation.csproj", "{3F218B21-E98C-4456-9EDB-12AB5DF39143}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WR.Consumers.Web.Presentation", "WR.Consumers.Web.Presentation\WR.Consumers.Web.Presentation.csproj", "{3F218B21-E98C-4456-9EDB-12AB5DF39143}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.1 - ContactMessageService", "2.1 - ContactMessageService", "{68A8D1D7-E76D-4035-87BC-DF6EB29D22C1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.1.1 - Presentation", "2.1.1 - Presentation", "{F7082B32-9B9E-414F-AC0F-0A3F8933DBFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WR.Microservices.ContactMessageService.Presentation", "WR.Microservices.ContactMessageService.Presentation\WR.Microservices.ContactMessageService.Presentation.csproj", "{2733017D-6782-4DE9-AB9F-AD44FA9E79F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WR.Microservices.ContactMessageService.Presentation", "WR.Microservices.ContactMessageService.Presentation\WR.Microservices.ContactMessageService.Presentation.csproj", "{2733017D-6782-4DE9-AB9F-AD44FA9E79F5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.1.2 - Application", "2.1.2 - Application", "{34EA10B7-D8D5-4036-AFC3-18599B690AC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WR.Microservices.ContactMessageService.Application", "WR.Microservices.ContactMessageService.Application\WR.Microservices.ContactMessageService.Application.csproj", "{823B3B8A-F65D-4303-A1ED-1FE4E5F17142}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WR.Microservices.ContactMessageService.Application", "WR.Microservices.ContactMessageService.Application\WR.Microservices.ContactMessageService.Application.csproj", "{823B3B8A-F65D-4303-A1ED-1FE4E5F17142}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.1.3 - Domain", "2.1.3 - Domain", "{D65DD420-7D28-4A16-8D16-1BE51F992AC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WR.Microservices.ContactMessageService.Domain", "WR.Microservices.ContactMessageService.Domain\WR.Microservices.ContactMessageService.Domain.csproj", "{6C5AA1AB-0D75-4DBB-9871-7E6263F579FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WR.Microservices.ContactMessageService.Domain", "WR.Microservices.ContactMessageService.Domain\WR.Microservices.ContactMessageService.Domain.csproj", "{6C5AA1AB-0D75-4DBB-9871-7E6263F579FB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.1.4 - Persistence", "2.1.4 - Persistence", "{B77C3D0F-E997-4BE5-8738-4DAA01620464}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WR.Microservices.ContactMessageService.Persistence", "WR.Microservices.ContactMessageService.Persistence\WR.Microservices.ContactMessageService.Persistence.csproj", "{54973DE1-88C1-44C4-8FD2-BA9FAE5D0578}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WR.Microservices.ContactMessageService.Persistence", "WR.Microservices.ContactMessageService.Persistence\WR.Microservices.ContactMessageService.Persistence.csproj", "{54973DE1-88C1-44C4-8FD2-BA9FAE5D0578}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.1.5 - Infra", "2.1.5 - Infra", "{EBBF831C-6470-4D00-BEE6-95902B66AC5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WR.Microservices.ContactMessageService.Infra", "WR.Microservices.ContactMessageService.Infra\WR.Microservices.ContactMessageService.Infra.csproj", "{45BCD5C4-A4E5-4D54-88E7-91936AF73000}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WR.Microservices.ContactMessageService.Infra", "WR.Microservices.ContactMessageService.Infra\WR.Microservices.ContactMessageService.Infra.csproj", "{45BCD5C4-A4E5-4D54-88E7-91936AF73000}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.3 - GitHubIntegratorService", "2.3 - GitHubIntegratorService", "{9AD3D62C-AC56-4783-92F7-DE59F4BD3838}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.3.1 - Presentation", "2.3.1 - Presentation", "{BBB4D875-01AA-4D6A-BAEF-57017A876640}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WR.Microservices.GitHubIntegratorService.Presentation", "WR.Microservices.GitHubIntegratorService.Presentation\WR.Microservices.GitHubIntegratorService.Presentation.csproj", "{01D7168D-F6C3-4E52-B5F2-4091EA1FBABE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.3.2 - Application", "2.3.2 - Application", "{17B617F8-D3C2-4892-ADD2-D652855AFC71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WR.Microservices.GitHubIntegratorService.Application", "WR.Microservices.GitHubIntegratorService.Application\WR.Microservices.GitHubIntegratorService.Application.csproj", "{04976FD8-1D2C-41CE-A1E7-9AEE477E392D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.3.3 - Domain", "2.3.3 - Domain", "{77D2F985-1BD2-43CF-9829-3D2A65E71813}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WR.Microservices.GitHubIntegratorService.Domain", "WR.Microservices.GitHubIntegratorService.Domain\WR.Microservices.GitHubIntegratorService.Domain.csproj", "{AB18A4BA-9DB7-49BD-BB59-DE5C4C879D1E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.3.4 - Persistence", "2.3.4 - Persistence", "{EABE071E-98BB-4D95-AA6A-B354EF25516D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WR.Microservices.GitHubIntegratorService.Persistence", "WR.Microservices.GitHubIntegratorService.Persistence\WR.Microservices.GitHubIntegratorService.Persistence.csproj", "{2598DA8B-F508-418A-996B-287BAFC9FFF5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{EEE954C6-F710-4BB2-8AFD-090AA4310051}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WR.Microservices.GitHubIntegratorService.Infra", "WR.Microservices.GitHubIntegratorService.Infra\WR.Microservices.GitHubIntegratorService.Infra.csproj", "{66806037-1FBF-4FC5-BD92-2A7CC51A4936}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WR.Microservices.GitHubIntegratorService.Domain.Core", "WR.Microservices.GitHubIntegratorService.Domain.Core\WR.Microservices.GitHubIntegratorService.Domain.Core.csproj", "{6F19CDD7-0758-4320-8DE0-343F5C4A536F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -156,6 +180,30 @@ Global
 		{45BCD5C4-A4E5-4D54-88E7-91936AF73000}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45BCD5C4-A4E5-4D54-88E7-91936AF73000}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45BCD5C4-A4E5-4D54-88E7-91936AF73000}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01D7168D-F6C3-4E52-B5F2-4091EA1FBABE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01D7168D-F6C3-4E52-B5F2-4091EA1FBABE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01D7168D-F6C3-4E52-B5F2-4091EA1FBABE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01D7168D-F6C3-4E52-B5F2-4091EA1FBABE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04976FD8-1D2C-41CE-A1E7-9AEE477E392D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04976FD8-1D2C-41CE-A1E7-9AEE477E392D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04976FD8-1D2C-41CE-A1E7-9AEE477E392D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04976FD8-1D2C-41CE-A1E7-9AEE477E392D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB18A4BA-9DB7-49BD-BB59-DE5C4C879D1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB18A4BA-9DB7-49BD-BB59-DE5C4C879D1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB18A4BA-9DB7-49BD-BB59-DE5C4C879D1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB18A4BA-9DB7-49BD-BB59-DE5C4C879D1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2598DA8B-F508-418A-996B-287BAFC9FFF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2598DA8B-F508-418A-996B-287BAFC9FFF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2598DA8B-F508-418A-996B-287BAFC9FFF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2598DA8B-F508-418A-996B-287BAFC9FFF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66806037-1FBF-4FC5-BD92-2A7CC51A4936}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66806037-1FBF-4FC5-BD92-2A7CC51A4936}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66806037-1FBF-4FC5-BD92-2A7CC51A4936}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66806037-1FBF-4FC5-BD92-2A7CC51A4936}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F19CDD7-0758-4320-8DE0-343F5C4A536F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F19CDD7-0758-4320-8DE0-343F5C4A536F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F19CDD7-0758-4320-8DE0-343F5C4A536F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F19CDD7-0758-4320-8DE0-343F5C4A536F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -199,6 +247,18 @@ Global
 		{54973DE1-88C1-44C4-8FD2-BA9FAE5D0578} = {B77C3D0F-E997-4BE5-8738-4DAA01620464}
 		{EBBF831C-6470-4D00-BEE6-95902B66AC5D} = {68A8D1D7-E76D-4035-87BC-DF6EB29D22C1}
 		{45BCD5C4-A4E5-4D54-88E7-91936AF73000} = {EBBF831C-6470-4D00-BEE6-95902B66AC5D}
+		{9AD3D62C-AC56-4783-92F7-DE59F4BD3838} = {8D27A25A-DB9F-4968-8EF2-6484EC7248EA}
+		{BBB4D875-01AA-4D6A-BAEF-57017A876640} = {9AD3D62C-AC56-4783-92F7-DE59F4BD3838}
+		{01D7168D-F6C3-4E52-B5F2-4091EA1FBABE} = {BBB4D875-01AA-4D6A-BAEF-57017A876640}
+		{17B617F8-D3C2-4892-ADD2-D652855AFC71} = {9AD3D62C-AC56-4783-92F7-DE59F4BD3838}
+		{04976FD8-1D2C-41CE-A1E7-9AEE477E392D} = {17B617F8-D3C2-4892-ADD2-D652855AFC71}
+		{77D2F985-1BD2-43CF-9829-3D2A65E71813} = {9AD3D62C-AC56-4783-92F7-DE59F4BD3838}
+		{AB18A4BA-9DB7-49BD-BB59-DE5C4C879D1E} = {77D2F985-1BD2-43CF-9829-3D2A65E71813}
+		{EABE071E-98BB-4D95-AA6A-B354EF25516D} = {9AD3D62C-AC56-4783-92F7-DE59F4BD3838}
+		{2598DA8B-F508-418A-996B-287BAFC9FFF5} = {EABE071E-98BB-4D95-AA6A-B354EF25516D}
+		{EEE954C6-F710-4BB2-8AFD-090AA4310051} = {9AD3D62C-AC56-4783-92F7-DE59F4BD3838}
+		{66806037-1FBF-4FC5-BD92-2A7CC51A4936} = {EEE954C6-F710-4BB2-8AFD-090AA4310051}
+		{6F19CDD7-0758-4320-8DE0-343F5C4A536F} = {77D2F985-1BD2-43CF-9829-3D2A65E71813}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D88D7D45-066E-41A3-B6EE-46C0AE939FDC}
