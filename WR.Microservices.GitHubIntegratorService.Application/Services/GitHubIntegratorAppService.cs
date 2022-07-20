@@ -6,13 +6,9 @@ public class GitHubIntegratorAppService : IGitHubIntegratorAppService
 
     public GitHubIntegratorAppService(IMediator mediator) => _mediator = mediator;
 
-    public Task<IEnumerable<GitHubRepositoryResponse>> GetAllRepositoriesAsync()
-    {
-        throw new NotImplementedException();
-    }
+    public async Task<IEnumerable<GitHubRepositoryResponse>> GetAllRepositoriesAsync(string gitHubUsername) =>
+        await _mediator.Send(request: new GetGitHubRepositoriesListByUsernameQuery(gitHubUsername));
 
-    public Task<GitHubRepositoryResponse?> GetRepositoryAsync(Guid key)
-    {
-        throw new NotImplementedException();
-    }
+    public async Task<GitHubRepositoryResponse?> GetRepositoryAsync(string gitHubUsername, string gitHubRepositoryName) =>
+        await _mediator.Send(request: new GetGitHubRepositoryByNameQuery(gitHubUsername, gitHubRepositoryName));
 }

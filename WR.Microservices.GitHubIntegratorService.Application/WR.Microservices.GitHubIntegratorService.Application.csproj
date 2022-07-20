@@ -12,6 +12,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WR.Microservices.GitHubIntegratorService.Domain.Core\WR.Microservices.GitHubIntegratorService.Domain.Core.csproj" />
+    <ProjectReference Include="..\WR.Microservices.GitHubIntegratorService.Domain\WR.Microservices.GitHubIntegratorService.Domain.csproj" />
+    <ProjectReference Include="..\WR.Microservices.GitHubIntegratorService.Persistence\WR.Microservices.GitHubIntegratorService.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

@@ -90,25 +90,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.3 - GitHubIntegratorServi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.3.1 - Presentation", "2.3.1 - Presentation", "{BBB4D875-01AA-4D6A-BAEF-57017A876640}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WR.Microservices.GitHubIntegratorService.Presentation", "WR.Microservices.GitHubIntegratorService.Presentation\WR.Microservices.GitHubIntegratorService.Presentation.csproj", "{01D7168D-F6C3-4E52-B5F2-4091EA1FBABE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WR.Microservices.GitHubIntegratorService.Presentation", "WR.Microservices.GitHubIntegratorService.Presentation\WR.Microservices.GitHubIntegratorService.Presentation.csproj", "{01D7168D-F6C3-4E52-B5F2-4091EA1FBABE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.3.2 - Application", "2.3.2 - Application", "{17B617F8-D3C2-4892-ADD2-D652855AFC71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WR.Microservices.GitHubIntegratorService.Application", "WR.Microservices.GitHubIntegratorService.Application\WR.Microservices.GitHubIntegratorService.Application.csproj", "{04976FD8-1D2C-41CE-A1E7-9AEE477E392D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WR.Microservices.GitHubIntegratorService.Application", "WR.Microservices.GitHubIntegratorService.Application\WR.Microservices.GitHubIntegratorService.Application.csproj", "{04976FD8-1D2C-41CE-A1E7-9AEE477E392D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.3.3 - Domain", "2.3.3 - Domain", "{77D2F985-1BD2-43CF-9829-3D2A65E71813}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WR.Microservices.GitHubIntegratorService.Domain", "WR.Microservices.GitHubIntegratorService.Domain\WR.Microservices.GitHubIntegratorService.Domain.csproj", "{AB18A4BA-9DB7-49BD-BB59-DE5C4C879D1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WR.Microservices.GitHubIntegratorService.Domain", "WR.Microservices.GitHubIntegratorService.Domain\WR.Microservices.GitHubIntegratorService.Domain.csproj", "{AB18A4BA-9DB7-49BD-BB59-DE5C4C879D1E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.3.4 - Persistence", "2.3.4 - Persistence", "{EABE071E-98BB-4D95-AA6A-B354EF25516D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WR.Microservices.GitHubIntegratorService.Persistence", "WR.Microservices.GitHubIntegratorService.Persistence\WR.Microservices.GitHubIntegratorService.Persistence.csproj", "{2598DA8B-F508-418A-996B-287BAFC9FFF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WR.Microservices.GitHubIntegratorService.Persistence", "WR.Microservices.GitHubIntegratorService.Persistence\WR.Microservices.GitHubIntegratorService.Persistence.csproj", "{2598DA8B-F508-418A-996B-287BAFC9FFF5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{EEE954C6-F710-4BB2-8AFD-090AA4310051}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.3.5 - Infra", "2.3.5 - Infra", "{EEE954C6-F710-4BB2-8AFD-090AA4310051}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WR.Microservices.GitHubIntegratorService.Infra", "WR.Microservices.GitHubIntegratorService.Infra\WR.Microservices.GitHubIntegratorService.Infra.csproj", "{66806037-1FBF-4FC5-BD92-2A7CC51A4936}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WR.Microservices.GitHubIntegratorService.Infra", "WR.Microservices.GitHubIntegratorService.Infra\WR.Microservices.GitHubIntegratorService.Infra.csproj", "{66806037-1FBF-4FC5-BD92-2A7CC51A4936}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WR.Microservices.GitHubIntegratorService.Domain.Core", "WR.Microservices.GitHubIntegratorService.Domain.Core\WR.Microservices.GitHubIntegratorService.Domain.Core.csproj", "{6F19CDD7-0758-4320-8DE0-343F5C4A536F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WR.Microservices.GitHubIntegratorService.Domain.Core", "WR.Microservices.GitHubIntegratorService.Domain.Core\WR.Microservices.GitHubIntegratorService.Domain.Core.csproj", "{6F19CDD7-0758-4320-8DE0-343F5C4A536F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -6,15 +6,19 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>f768f7f3-23fc-44da-9744-ee1557ad9335</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+	 <GenerateDocumentationFile>true</GenerateDocumentationFile>
+	 <NoWarn>$(NoWarn);1591</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\WR.Microservices.GitHubIntegratorService.Application\WR.Microservices.GitHubIntegratorService.Application.csproj" />
+    <ProjectReference Include="..\WR.Microservices.GitHubIntegratorService.Infra\WR.Microservices.GitHubIntegratorService.Infra.csproj" />
   </ItemGroup>
 
 </Project>

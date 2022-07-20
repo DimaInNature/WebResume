@@ -1,1 +1,9 @@
-﻿
+﻿global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using StackExchange.Redis;
+global using WR.Microservices.GitHubIntegratorService.Application.Interfaces;
+global using WR.Microservices.GitHubIntegratorService.Application.Services;
+global using WR.Microservices.GitHubIntegratorService.Application.Services.Decorators;
+global using WR.Microservices.GitHubIntegratorService.Domain.Core.Models;
+global using WR.Microservices.GitHubIntegratorService.Persistence.Interfaces;
+global using WR.Microservices.GitHubIntegratorService.Persistence.Repositories.Cache;
