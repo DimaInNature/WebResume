@@ -9,7 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WR.Consumers.Web.Application\WR.Consumers.Web.Application.csproj" />
+    <ProjectReference Include="..\WR.Consumers.Web.Domain.Core\WR.Consumers.Web.Domain.Core.csproj" />
+    <ProjectReference Include="..\WR.Consumers.Web.Domain\WR.Consumers.Web.Domain.csproj" />
+    <ProjectReference Include="..\WR.Consumers.Web.Infra\WR.Consumers.Web.Infra.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,4 +1,4 @@
-﻿namespace WR.Consumers.Web.Domain.Models;
+﻿namespace WR.Consumers.Web.Domain.Core.Models;
 
 public class ContactMessage
 {

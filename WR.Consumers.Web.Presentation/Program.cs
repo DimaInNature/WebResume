@@ -15,6 +15,10 @@ app.Run();
 void RegisterServices(IServiceCollection services)
 {
     services.AddControllersWithViews();
+
+    services.AddMediatRConfiguration();
+
+    services.RegisterServices();
 }
 
 //Pipeline
