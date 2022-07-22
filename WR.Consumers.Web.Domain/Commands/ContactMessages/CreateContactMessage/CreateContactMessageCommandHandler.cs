@@ -7,7 +7,7 @@ public sealed record class CreateContactMessageCommandHandler
     {
         if (request.ContactMessage is null) return null;
 
-        HttpSender httpSender = new(hostUri: "https://localhost:7040");
+        HttpSender httpSender = new(hostUri: "https://localhost:5021");
 
         var result = await httpSender.PostAndReturnAsync(
             routePath: "ContactMessages",

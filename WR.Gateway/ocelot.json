@@ -1,0 +1,20 @@
+{
+   "Routes": [
+      {
+         "DownstreamPathTemplate": "/ContactMessages",
+         "DownstreamScheme": "https",
+         "DownstreamHostAndPorts": [
+            {
+               "Host": "localhost",
+               "Port": 7040
+            }
+         ],
+         "UpstreamPathTemplate": "/ContactMessages",
+         "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+         "FileCacheOptions": { "TtlSeconds": 30 }
+      }
+   ],
+   "GlobalConfiguration": {
+      "BaseUrl": "https://localhost:5021"
+   }
+}
