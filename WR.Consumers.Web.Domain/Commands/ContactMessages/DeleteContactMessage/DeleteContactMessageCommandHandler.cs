@@ -3,13 +3,24 @@
 public sealed record class DeleteContactMessageCommandHandler
     : IRequestHandler<DeleteContactMessageCommand>
 {
-    public async Task<Unit> Handle(DeleteContactMessageCommand request, CancellationToken token)
+    private readonly IConfiguration _configuration;
+
+    public DeleteContactMessageCommandHandler(IConfiguration configuration) =>
+        _configuration = configuration;
+
+    public async Task<Unit> Handle(
+        DeleteContactMessageCommand request,
+        CancellationToken token)
     {
         if (Guid.Empty == request.Id) return Unit.Value;
 
-        HttpSender httpSender = new(hostUri: "https://localhost:7040");
+        HttpSender sender = new(hostUri: _configuration[key: "Routes:Gateway"]);
 
-        await httpSender.DeleteAsync($"ContactMessages/{request.Id}", token);
+        await sender.DeleteAsync(
+            routePath: string.Format(
+                format: _configuration[key: "Routes:ContactMessages:DeleteContactMessage"],
+                arg0: request.Id),
+            cancellationToken: token);
 
         return Unit.Value;
     }

@@ -3,14 +3,21 @@
 public sealed record class GetPetProjectListByOwnerNameQueryHandler
     : IRequestHandler<GetPetProjectListByOwnerNameQuery, IEnumerable<PetProject>>
 {
+    private readonly IConfiguration _configuration;
+
+    public GetPetProjectListByOwnerNameQueryHandler(IConfiguration configuration) =>
+        _configuration = configuration;
+
     public async Task<IEnumerable<PetProject>> Handle(GetPetProjectListByOwnerNameQuery request, CancellationToken token)
     {
         if (string.IsNullOrWhiteSpace(value: request.OwnerName)) return new List<PetProject>();
 
-        HttpSender sender = new(hostUri: "https://localhost:5021");
+        HttpSender sender = new(hostUri: _configuration[key: "Routes:Gateway"]);
 
         var result = await sender.GetAsync<IEnumerable<PetProject>>(
-            routePath: $"PetProjects/{request.OwnerName}",
+            routePath: string.Format(
+                format: _configuration[key: "Routes:PetProjects:GetPetProjectListByOwnerName"],
+                arg0: _configuration[key: "User:Nickname"]),
             cancellationToken: token);
 
         return result ?? new List<PetProject>();
