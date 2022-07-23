@@ -6,11 +6,11 @@ public static class PetProjectMediatRProfile
     {
         #region Queries
 
-        services.AddScoped<IRequest<IEnumerable<PetProjectEntity>>, GetPetProjectsListQuery>();
-        services.AddScoped<IRequestHandler<GetPetProjectsListQuery, IEnumerable<PetProjectEntity>>, GetPetProjectsListQueryHandler>();
+        services.AddScoped<IRequest<IEnumerable<PetProjectEntity>>, GetPetProjectsListByOwnerNameQuery>();
+        services.AddScoped<IRequestHandler<GetPetProjectsListByOwnerNameQuery, IEnumerable<PetProjectEntity>>, GetPetProjectsListByOwnerNameQueryHandler>();
 
-        services.AddScoped<IRequest<PetProjectEntity?>, GetPetProjectByIdQuery>();
-        services.AddScoped<IRequestHandler<GetPetProjectByIdQuery, PetProjectEntity?>, GetPetProjectByIdQueryHandler>();
+        services.AddScoped<IRequest<PetProjectEntity?>, GetPetProjectByNameAndOwnerNameQuery>();
+        services.AddScoped<IRequestHandler<GetPetProjectByNameAndOwnerNameQuery, PetProjectEntity?>, GetPetProjectByNameAndOwnerQueryHandler>();
 
         #endregion
     }

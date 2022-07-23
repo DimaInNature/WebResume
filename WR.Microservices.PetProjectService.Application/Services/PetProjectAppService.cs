@@ -6,9 +6,9 @@ public class PetProjectAppService : IPetProjectAppService
 
     public PetProjectAppService(IMediator mediator) => _mediator = mediator;
 
-    public Task<IEnumerable<PetProjectEntity>> GetAllAsync() =>
-        _mediator.Send(request: new GetPetProjectsListQuery());
+    public Task<IEnumerable<PetProjectEntity>> GetAllByOwnerNameAsync(string ownerName) =>
+        _mediator.Send(request: new GetPetProjectsListByOwnerNameQuery(ownerName));
 
-    public Task<PetProjectEntity?> GetAsync(Guid key) =>
-        _mediator.Send(request: new GetPetProjectByIdQuery(key));
+    public Task<PetProjectEntity?> GetAsync(string repositoryName, string ownerName) =>
+        _mediator.Send(request: new GetPetProjectByNameAndOwnerNameQuery(repositoryName, ownerName));
 }

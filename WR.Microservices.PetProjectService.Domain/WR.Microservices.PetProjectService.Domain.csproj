@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WR.Microservices.PetProjectService.Persistence\WR.Microservices.PetProjectService.Persistence.csproj" />
+    <ProjectReference Include="..\WR.Shared.Domain\WR.Shared.Domain.csproj" />
   </ItemGroup>
 
 </Project>

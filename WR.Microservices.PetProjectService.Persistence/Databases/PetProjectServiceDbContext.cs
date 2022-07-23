@@ -26,11 +26,20 @@ public class PetProjectServiceDbContext : DbContext
     {
         new()
         {
-            Id = Guid.NewGuid(),
-            Name = "Readme",
-            Description = "My Readme.md in GitHub",
-            ProjectUrl = "https://github.com/DimaInNature/DimaInNature",
-            ImageUrl = "https://avatars.githubusercontent.com/u/78268612"
+            Id = 1,
+            RepositoryName = "Readme",
+            Description = "Simple readme.md",
+            CodeLines = 100,
+            CreatedDate = DateTime.Now,
+            WatchersCount = 5,
+            ApiUrl = "https://github.com/DimaInNature/DimaInNature",
+            Language = "Markdown",
+            Topics = new(),
+            FullRepositoryName = "https://github.com/DimaInNature/DimaInNature",
+            Url = "https://github.com/DimaInNature/DimaInNature",
+            StarsCount = 5,
+            SubscribersCount = 5,
+            UpdatedDate = DateTime.Now
         }
     };
 }

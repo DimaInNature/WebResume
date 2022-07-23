@@ -6,8 +6,6 @@ public static class DependencyInjectionConfiguration
     {
         _ = services ?? throw new ArgumentNullException(paramName: nameof(services));
 
-        services.AddTransient<IGenericRepository<PetProjectEntity>, GenericRepository<PetProjectEntity>>();
-
         services.AddTransient<IPetProjectAppService, PetProjectAppService>();
     }
 }

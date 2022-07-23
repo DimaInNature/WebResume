@@ -9,5 +9,7 @@ public static class MediatRConfiguration
         // Add features: ...
 
         services.AddContactMessageMediatRProfile();
+
+        services.AddPetProjectMediatRProfile();
     }
 }

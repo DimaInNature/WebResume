@@ -2,7 +2,7 @@
 
 public interface IPetProjectAppService
 {
-    Task<IEnumerable<PetProjectEntity>> GetAllAsync();
+    Task<IEnumerable<PetProjectEntity>> GetAllByOwnerNameAsync(string ownerName);
 
-    Task<PetProjectEntity?> GetAsync(Guid key);
+    Task<PetProjectEntity?> GetAsync(string repositoryName, string ownerName);
 }

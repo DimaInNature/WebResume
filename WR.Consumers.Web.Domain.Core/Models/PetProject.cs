@@ -2,21 +2,31 @@
 
 public class PetProject
 {
-    public Guid Id { get; set; } = Guid.NewGuid();  
+    public int Id { get; set; }
 
-    public string Name { get; set; } = string.Empty;
+    public string RepositoryName { get; set; } = string.Empty;
+
+    public string FullRepositoryName { get; set; } = string.Empty;
+
+    public string ApiUrl { get; set; } = string.Empty;
 
     public string Description { get; set; } = string.Empty;
 
-    public string ProjectUrl { get; set; } = string.Empty;
+    public string Url { get; set; } = string.Empty;
 
-    public string ImageUrl { get; set; } = string.Empty;
+    public DateTime CreatedDate { get; set; }
 
-    public PetProject(string name, string description, string projectUrl, string imageUrl) =>
-        (Name, Description, ProjectUrl, ImageUrl) = (name, description, projectUrl, imageUrl);
+    public DateTime UpdatedDate { get; set; }
 
-    public PetProject(Guid id, string name, string description,
-        string projectUrl, string imageUrl) : this(name, description, projectUrl, imageUrl) => Id = id;
+    public int CodeLines { get; set; }
 
-    public PetProject() { }
+    public int StarsCount { get; set; }
+
+    public string Language { get; set; } = string.Empty;
+
+    public List<string> Topics { get; set; } = new();
+
+    public int WatchersCount { get; set; }
+
+    public int SubscribersCount { get; set; }
 }

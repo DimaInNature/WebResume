@@ -7,5 +7,7 @@ public static class DependencyInjectionConfiguration
         _ = services ?? throw new ArgumentNullException(paramName: nameof(services));
 
         services.AddTransient<IContactMessageAppService, ContactMessageAppService>();
+
+        services.AddTransient<IPetProjectAppService, PetProjectAppService>();
     }
 }
