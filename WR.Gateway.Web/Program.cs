@@ -1,4 +1,4 @@
-namespace WR.Gateway;
+namespace WR.Gateway.Web;
 
 public class Program
 {

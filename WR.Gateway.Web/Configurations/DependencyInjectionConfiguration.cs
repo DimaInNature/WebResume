@@ -1,4 +1,4 @@
-﻿namespace WR.Gateway.Configurations;
+﻿namespace WR.Gateway.Web.Configurations;
 
 public static class DependencyInjectionConfiguration
 {

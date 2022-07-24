@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <UserSecretsId>6bd6c304-2eaa-45cb-9b0d-81a5f1d037ef</UserSecretsId>
+    <UserSecretsId>26086667-de1d-4241-a075-a332fbd74ccf</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
@@ -11,7 +11,6 @@
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
     <PackageReference Include="Ocelot" Version="18.0.0" />
     <PackageReference Include="Ocelot.Cache.CacheManager" Version="18.0.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
 </Project>
