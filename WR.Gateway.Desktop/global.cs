@@ -1,0 +1,14 @@
+﻿global using Microsoft.AspNetCore.Authentication.JwtBearer;
+global using Microsoft.AspNetCore.Builder;
+global using Microsoft.AspNetCore.Hosting;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Hosting;
+global using Microsoft.Extensions.Logging;
+global using Microsoft.IdentityModel.Tokens;
+global using Ocelot.Cache.CacheManager;
+global using Ocelot.DependencyInjection;
+global using Ocelot.Middleware;
+global using System;
+global using System.Text;
+global using WR.Gateway.Desktop.Configurations;
