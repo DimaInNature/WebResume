@@ -3,6 +3,11 @@
 public sealed record class GetPetProjectByNameAndOwnerQueryHandler
     : IRequestHandler<GetPetProjectByNameAndOwnerNameQuery, PetProjectEntity?>
 {
+    private readonly IConfiguration _configuration;
+
+    public GetPetProjectByNameAndOwnerQueryHandler(IConfiguration configuration) =>
+         _configuration = configuration;
+
     public async Task<PetProjectEntity?> Handle(
         GetPetProjectByNameAndOwnerNameQuery request, CancellationToken token)
     {
@@ -10,10 +15,13 @@ public sealed record class GetPetProjectByNameAndOwnerQueryHandler
             string.IsNullOrWhiteSpace(value: request.RepositoryName))
             return null;
 
-        HttpSender sender = new(hostUri: "https://localhost:7124");
+        HttpSender sender = new(hostUri: _configuration[key: "Routes:GitHubIntegrator:Url"]);
 
         var result = await sender.GetAsync<PetProjectEntity>(
-            routePath: $"GitHubRepositories/{request.OwnerName}/{request.RepositoryName}",
+            routePath: string.Format(
+                format: _configuration[key: "Routes:GitHubIntegrator:InnerRoutes:GetPetProjectByNameAndOwner"],
+                arg0: request.OwnerName,
+                arg1: request.RepositoryName),
             cancellationToken: token);
 
         return result;

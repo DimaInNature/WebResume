@@ -14,7 +14,7 @@ public class PortfolioViewComponent : ViewComponent
     public async Task<IViewComponentResult> InvokeAsync()
     {
         var model = await _petProjectAppService
-            .GetAllAsync(ownerName: _configuration[key: "User:Nickname"]); ;
+            .GetAllAsync(ownerName: _configuration[key: "User:Nickname"]);
 
         return View(model.OrderByDescending(x => x.StarsCount));
     }
