@@ -5,13 +5,24 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>
     <Folder Include="Content\Fonts\" />
-    <Folder Include="ViewModels\" />
-    <Folder Include="Views\" />
-    <Folder Include="Configurations\" />
+    <Folder Include="ViewModels\UserControls\" />
+    <Folder Include="Views\UserControls\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WR.Consumers.Desktop.Domain.Core\WR.Consumers.Desktop.Domain.Core.csproj" />
+    <ProjectReference Include="..\WR.Consumers.Desktop.Infra\WR.Consumers.Desktop.Infra.csproj" />
   </ItemGroup>
 
 </Project>

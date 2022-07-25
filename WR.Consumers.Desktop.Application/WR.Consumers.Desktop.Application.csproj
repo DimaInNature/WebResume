@@ -7,8 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
-    <Folder Include="Interfaces\" />
+    <PackageReference Include="MediatR" Version="10.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WR.Consumers.Desktop.Domain.Core\WR.Consumers.Desktop.Domain.Core.csproj" />
   </ItemGroup>
 
 </Project>
