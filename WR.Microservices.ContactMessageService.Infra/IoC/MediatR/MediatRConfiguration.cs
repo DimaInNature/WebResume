@@ -1,4 +1,4 @@
-﻿namespace WR.Microservices.ContactMessageService.Presentation.Configurations.MediatR;
+﻿namespace WR.Microservices.ContactMessageService.Infra.IoC.MediatR;
 
 public static class MediatRConfiguration
 {

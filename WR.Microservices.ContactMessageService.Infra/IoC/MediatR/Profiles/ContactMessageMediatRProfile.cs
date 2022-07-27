@@ -1,4 +1,4 @@
-﻿namespace WR.Microservices.ContactMessageService.Presentation.Configurations.MediatR.Profiles;
+﻿namespace WR.Microservices.ContactMessageService.Infra.IoC.MediatR.Profiles;
 
 public static class ContactMessageMediatRProfile
 {

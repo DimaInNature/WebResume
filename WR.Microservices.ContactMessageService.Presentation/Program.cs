@@ -13,7 +13,7 @@ void RegisterServices(IServiceCollection services)
     services.AddCors();
 
     // Setting DBContext
-    services.AddDatabaseConfiguration(builder);
+    services.AddDatabaseConfiguration(configuration: builder.Configuration);
 
     // Swagger
     services.AddSwaggerConfiguration();
