@@ -1,9 +1,13 @@
-﻿global using Microsoft.Extensions.Configuration;
+﻿global using MediatR;
+global using Microsoft.Extensions.Configuration;
 global using Microsoft.Extensions.DependencyInjection;
 global using StackExchange.Redis;
+global using System.Reflection;
 global using WR.Microservices.GitHubIntegratorService.Application.Interfaces;
 global using WR.Microservices.GitHubIntegratorService.Application.Services;
 global using WR.Microservices.GitHubIntegratorService.Application.Services.Decorators;
 global using WR.Microservices.GitHubIntegratorService.Domain.Core.Models;
+global using WR.Microservices.GitHubIntegratorService.Domain.Queries;
+global using WR.Microservices.GitHubIntegratorService.Infra.IoC.MediatR.Profiles;
 global using WR.Microservices.GitHubIntegratorService.Persistence.Interfaces;
 global using WR.Microservices.GitHubIntegratorService.Persistence.Repositories.Cache;

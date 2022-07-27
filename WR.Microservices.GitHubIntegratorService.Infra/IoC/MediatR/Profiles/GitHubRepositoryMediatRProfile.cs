@@ -1,4 +1,4 @@
-﻿namespace WR.Microservices.GitHubIntegratorService.Presentation.Configurations.MediatR.Profiles;
+﻿namespace WR.Microservices.GitHubIntegratorService.Infra.IoC.MediatR.Profiles;
 
 public static class GitHubRepositoryMediatRProfile
 {

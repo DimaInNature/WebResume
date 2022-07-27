@@ -1,4 +1,4 @@
-﻿namespace WR.Microservices.GitHubIntegratorService.Presentation.Configurations.MediatR;
+﻿namespace WR.Microservices.GitHubIntegratorService.Infra.IoC.MediatR;
 
 public static class MediatRConfiguration
 {
