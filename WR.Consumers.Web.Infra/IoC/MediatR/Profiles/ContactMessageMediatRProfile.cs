@@ -1,4 +1,4 @@
-﻿namespace WR.Consumers.Web.Presentation.Configurations.MediatR.Profiles;
+﻿namespace WR.Consumers.Web.Infra.IoC.MediatR.Profiles;
 
 public static class ContactMessageMediatRProfile
 {

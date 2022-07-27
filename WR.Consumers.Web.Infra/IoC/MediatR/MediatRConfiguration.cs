@@ -1,4 +1,4 @@
-﻿namespace WR.Consumers.Web.Presentation.Configurations.MediatR;
+﻿namespace WR.Consumers.Web.Infra.IoC.MediatR;
 
 public static class MediatRConfiguration
 {

@@ -1,13 +1,7 @@
-﻿global using MediatR;
-global using Microsoft.AspNetCore.Mvc;
-global using System.Reflection;
+﻿global using Microsoft.AspNetCore.Mvc;
 global using WR.Consumers.Web.Application.Interfaces;
-global using WR.Consumers.Web.Domain.Commands.ContactMessages;
 global using WR.Consumers.Web.Domain.Core.Models;
-global using WR.Consumers.Web.Domain.Queries.ContactMessages;
-global using WR.Consumers.Web.Domain.Queries.PetProjects;
 global using WR.Consumers.Web.Infra.IoC;
+global using WR.Consumers.Web.Infra.IoC.MediatR;
 global using WR.Consumers.Web.Presentation.Configurations;
-global using WR.Consumers.Web.Presentation.Configurations.MediatR;
-global using WR.Consumers.Web.Presentation.Configurations.MediatR.Profiles;
 global using WR.Consumers.Web.Presentation.Middleware;
