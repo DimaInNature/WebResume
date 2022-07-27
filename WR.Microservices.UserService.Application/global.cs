@@ -1,1 +1,1 @@
-﻿
+﻿global using WR.Microservices.UserService.Application.Interfaces;

@@ -6,4 +6,17 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Queries\UserRoles\" />
+    <Folder Include="Queries\Users\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="10.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WR.Microservices.UserService.Persistence\WR.Microservices.UserService.Persistence.csproj" />
+  </ItemGroup>
+
 </Project>
