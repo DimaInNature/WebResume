@@ -9,6 +9,11 @@ public interface IGenericRepository<TEntity>
         Expression<Func<TEntity, bool>> predicate,
         CancellationToken token);
 
+    public Task<TEntity?> GetFirstOrDefaultWithIncludeAsync(
+        Expression<Func<TEntity, bool>> predicate,
+        CancellationToken token,
+        params Expression<Func<TEntity, object>>[] includeProperties);
+
     public IEnumerable<TEntity> GetAll();
 
     public IEnumerable<TEntity> GetAll(Func<TEntity, bool> predicate);

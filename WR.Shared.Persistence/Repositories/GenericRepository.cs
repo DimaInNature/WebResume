@@ -20,6 +20,14 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity>
         await _dbSet.AsNoTracking()
         .FirstOrDefaultAsync(predicate, cancellationToken: token);
 
+    public async Task<TEntity?> GetFirstOrDefaultWithIncludeAsync(
+        Expression<Func<TEntity, bool>> predicate,
+        CancellationToken token,
+        params Expression<Func<TEntity, object>>[] includeProperties) =>
+        await Include(includeProperties)
+        .Where(predicate)
+        .FirstOrDefaultAsync(token);
+
     public IEnumerable<TEntity> GetAll() => _dbSet.AsNoTracking();
 
     public IEnumerable<TEntity> GetAll(Func<TEntity, bool> predicate) =>
