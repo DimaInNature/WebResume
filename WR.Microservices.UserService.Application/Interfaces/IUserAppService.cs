@@ -4,11 +4,15 @@ public interface IUserAppService
 {
     Task<IEnumerable<UserEntity>> GetAllAsync();
 
-    Task<UserEntity?> GetAsync(Guid key);
+    Task<IEnumerable<UserEntity>> GetAllAsync(Func<UserEntity, bool> predicate);
+
+    Task<UserEntity?> GetAsync(Guid id);
+
+    Task<UserEntity?> GetAsync(Func<UserEntity, bool> predicate);
 
     Task CreateAsync(UserEntity entity);
 
     Task UpdateAsync(UserEntity entity);
 
-    Task DeleteAsync(Guid key);
+    Task DeleteAsync(Guid id);
 }

@@ -162,41 +162,39 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.4.4 - Persistence", "3.4.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.4.5 - Infra", "3.4.5 - Infra", "{B6518ABB-47AB-4795-9F4A-F9F836E10C74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WR.Microservices.AuthenticationService.Presentation", "WR.Microservices.AuthenticationService.Presentation\WR.Microservices.AuthenticationService.Presentation.csproj", "{AA682CD9-F3BD-4C7F-BD77-058D27CB339D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WR.Microservices.AuthenticationService.Presentation", "WR.Microservices.AuthenticationService.Presentation\WR.Microservices.AuthenticationService.Presentation.csproj", "{AA682CD9-F3BD-4C7F-BD77-058D27CB339D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WR.Microservices.AuthenticationService.Application", "WR.Microservices.AuthenticationService.Application\WR.Microservices.AuthenticationService.Application.csproj", "{39A15F3F-913C-4AF4-821E-E83068648700}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WR.Microservices.AuthenticationService.Application", "WR.Microservices.AuthenticationService.Application\WR.Microservices.AuthenticationService.Application.csproj", "{39A15F3F-913C-4AF4-821E-E83068648700}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WR.Microservices.AuthenticationService.Domain", "WR.Microservices.AuthenticationService.Domain\WR.Microservices.AuthenticationService.Domain.csproj", "{2258DA25-3EB6-44FC-B7F3-15E909761260}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WR.Microservices.AuthenticationService.Domain", "WR.Microservices.AuthenticationService.Domain\WR.Microservices.AuthenticationService.Domain.csproj", "{2258DA25-3EB6-44FC-B7F3-15E909761260}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WR.Microservices.AuthenticationServices.Domain.Core", "WR.Microservices.AuthenticationServices.Domain.Core\WR.Microservices.AuthenticationServices.Domain.Core.csproj", "{8F0DEEAA-A553-49E2-80BE-703AE618070E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WR.Microservices.AuthenticationServices.Domain.Core", "WR.Microservices.AuthenticationServices.Domain.Core\WR.Microservices.AuthenticationServices.Domain.Core.csproj", "{8F0DEEAA-A553-49E2-80BE-703AE618070E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WR.Microservices.AuthenticationService.Persistence", "WR.Microservices.AuthenticationService.Persistence\WR.Microservices.AuthenticationService.Persistence.csproj", "{EE61BD1B-77AB-48BB-976E-56A4F17D05E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WR.Microservices.AuthenticationService.Persistence", "WR.Microservices.AuthenticationService.Persistence\WR.Microservices.AuthenticationService.Persistence.csproj", "{EE61BD1B-77AB-48BB-976E-56A4F17D05E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WR.Microservices.AuthenticationService.Infra", "WR.Microservices.AuthenticationService.Infra\WR.Microservices.AuthenticationService.Infra.csproj", "{77B17889-0A7B-4F9D-90AD-C9D5CC6ADE5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WR.Microservices.AuthenticationService.Infra", "WR.Microservices.AuthenticationService.Infra\WR.Microservices.AuthenticationService.Infra.csproj", "{77B17889-0A7B-4F9D-90AD-C9D5CC6ADE5B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.5 - UserService", "3.5 - UserService", "{506D3162-97F3-41FB-BEBA-16307C31E092}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.5.1 - Presentation", "3.5.1 - Presentation", "{6AD76B5C-F78B-42CB-A124-A2A2D931AA1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WR.Microservices.UserService.Presentation", "WR.Microservices.UserService.Presentation\WR.Microservices.UserService.Presentation.csproj", "{75C5FA05-D2EF-4EC1-BEB1-58FE24CFC505}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WR.Microservices.UserService.Presentation", "WR.Microservices.UserService.Presentation\WR.Microservices.UserService.Presentation.csproj", "{75C5FA05-D2EF-4EC1-BEB1-58FE24CFC505}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.5.2 - Application", "3.5.2 - Application", "{426E8B17-79E4-4633-AF9F-D88AB3E02310}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WR.Microservices.UserService.Application", "WR.Microservices.UserService.Application\WR.Microservices.UserService.Application.csproj", "{2EFDADBB-1654-449D-BDA8-5E2C535EB01B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WR.Microservices.UserService.Application", "WR.Microservices.UserService.Application\WR.Microservices.UserService.Application.csproj", "{2EFDADBB-1654-449D-BDA8-5E2C535EB01B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.5.3 - Domain", "3.5.3 - Domain", "{DDB4E128-5104-4F73-BE0B-8ADDEF4AB3A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WR.Microservices.UserService.Domain", "WR.Microservices.UserService.Domain\WR.Microservices.UserService.Domain.csproj", "{A812AF32-50A4-4CDA-BF5B-A95627558F68}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WR.Microservices.UserService.Domain.Core", "WR.Microservices.UserService.Domain.Core\WR.Microservices.UserService.Domain.Core.csproj", "{344AFFAA-9D44-4F03-BB5F-9466AB27AC2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WR.Microservices.UserService.Domain", "WR.Microservices.UserService.Domain\WR.Microservices.UserService.Domain.csproj", "{A812AF32-50A4-4CDA-BF5B-A95627558F68}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.5.4 - Persistence", "3.5.4 - Persistence", "{BE1BE5D1-8569-44E0-9322-5FA98BBDE8FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WR.Microservices.UserService.Persistence", "WR.Microservices.UserService.Persistence\WR.Microservices.UserService.Persistence.csproj", "{07877174-7957-4A2D-B5D5-7680AD887BFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WR.Microservices.UserService.Persistence", "WR.Microservices.UserService.Persistence\WR.Microservices.UserService.Persistence.csproj", "{07877174-7957-4A2D-B5D5-7680AD887BFF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.5.5 - Infra", "3.5.5 - Infra", "{7481E9FB-E7A2-4FE2-BF0E-FF254C845E3B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WR.Microservices.UserService.Infra", "WR.Microservices.UserService.Infra\WR.Microservices.UserService.Infra.csproj", "{3A043D2A-5AF7-45D6-91D7-6B9B709C6652}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WR.Microservices.UserService.Infra", "WR.Microservices.UserService.Infra\WR.Microservices.UserService.Infra.csproj", "{3A043D2A-5AF7-45D6-91D7-6B9B709C6652}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -368,10 +366,6 @@ Global
 		{A812AF32-50A4-4CDA-BF5B-A95627558F68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A812AF32-50A4-4CDA-BF5B-A95627558F68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A812AF32-50A4-4CDA-BF5B-A95627558F68}.Release|Any CPU.Build.0 = Release|Any CPU
-		{344AFFAA-9D44-4F03-BB5F-9466AB27AC2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{344AFFAA-9D44-4F03-BB5F-9466AB27AC2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{344AFFAA-9D44-4F03-BB5F-9466AB27AC2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{344AFFAA-9D44-4F03-BB5F-9466AB27AC2E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{07877174-7957-4A2D-B5D5-7680AD887BFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{07877174-7957-4A2D-B5D5-7680AD887BFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07877174-7957-4A2D-B5D5-7680AD887BFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -474,7 +468,6 @@ Global
 		{2EFDADBB-1654-449D-BDA8-5E2C535EB01B} = {426E8B17-79E4-4633-AF9F-D88AB3E02310}
 		{DDB4E128-5104-4F73-BE0B-8ADDEF4AB3A9} = {506D3162-97F3-41FB-BEBA-16307C31E092}
 		{A812AF32-50A4-4CDA-BF5B-A95627558F68} = {DDB4E128-5104-4F73-BE0B-8ADDEF4AB3A9}
-		{344AFFAA-9D44-4F03-BB5F-9466AB27AC2E} = {DDB4E128-5104-4F73-BE0B-8ADDEF4AB3A9}
 		{BE1BE5D1-8569-44E0-9322-5FA98BBDE8FA} = {506D3162-97F3-41FB-BEBA-16307C31E092}
 		{07877174-7957-4A2D-B5D5-7680AD887BFF} = {BE1BE5D1-8569-44E0-9322-5FA98BBDE8FA}
 		{7481E9FB-E7A2-4FE2-BF0E-FF254C845E3B} = {506D3162-97F3-41FB-BEBA-16307C31E092}

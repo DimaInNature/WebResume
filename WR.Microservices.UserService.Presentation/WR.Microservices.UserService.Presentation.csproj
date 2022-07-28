@@ -6,11 +6,21 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>c7615a37-fdbe-4171-a16d-7d1037a9b501</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+	<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	<NoWarn>$(NoWarn);1591</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.7" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WR.Microservices.UserService.Application\WR.Microservices.UserService.Application.csproj" />
+    <ProjectReference Include="..\WR.Microservices.UserService.Infra\WR.Microservices.UserService.Infra.csproj" />
+    <ProjectReference Include="..\WR.Microservices.UserService.Persistence\WR.Microservices.UserService.Persistence.csproj" />
+    <ProjectReference Include="..\WR.Shared.Persistence\WR.Shared.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

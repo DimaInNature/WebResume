@@ -10,6 +10,9 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity>
     public GenericRepository(DbContext context) =>
         (_context, _dbSet) = (context, _dbSet = context.Set<TEntity>());
 
+    public TEntity? GetFirstOrDefault(Func<TEntity, bool> predicate) =>
+        _dbSet.AsNoTracking().FirstOrDefault(predicate);
+
     public async Task<TEntity?> GetFirstOrDefaultAsync(Guid key, CancellationToken token) =>
         await _dbSet.AsNoTracking()
         .FirstOrDefaultAsync(predicate: entity => entity.Id == key,

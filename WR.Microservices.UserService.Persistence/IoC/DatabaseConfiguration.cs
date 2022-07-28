@@ -8,8 +8,6 @@ public static class DatabaseConfiguration
 
         services.AddDbContextPool<UserServiceDbContext>(options =>
         {
-            // Set Connection String
-
             options.UseSqlite(connectionString: configuration.GetConnectionString(name: "Sqlite"));
         });
     }

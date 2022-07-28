@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="10.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WR.Microservices.UserService.Domain\WR.Microservices.UserService.Domain.csproj" />
+    <ProjectReference Include="..\WR.Microservices.UserService.Persistence\WR.Microservices.UserService.Persistence.csproj" />
+  </ItemGroup>
+
 </Project>

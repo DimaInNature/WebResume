@@ -3,11 +3,9 @@
 public interface IGenericRepository<TEntity>
     where TEntity : class, IDatabaseEntity
 {
-    public Task<TEntity?> GetFirstOrDefaultAsync(Guid key, CancellationToken token);
+    public TEntity? GetFirstOrDefault(Func<TEntity, bool> predicate);
 
-    public Task<TEntity?> GetFirstOrDefaultAsync(
-        Expression<Func<TEntity, bool>> predicate,
-        CancellationToken token);
+    public Task<TEntity?> GetFirstOrDefaultAsync(Guid key, CancellationToken token);
 
     public Task<TEntity?> GetFirstOrDefaultWithIncludeAsync(
         Expression<Func<TEntity, bool>> predicate,

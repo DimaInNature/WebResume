@@ -14,7 +14,7 @@ public sealed class UserServiceDbContext : DbContext
         modelBuilder.Entity<UserEntity>()
             .HasIndex(indexExpression: user => user.Id)
             .IsUnique();
-
+ 
         modelBuilder.Entity<UserEntity>()
             .HasData(data: GetUsers());
 
@@ -39,13 +39,6 @@ public sealed class UserServiceDbContext : DbContext
             Username = "Admin",
             Password = "123456",
             UserRoleId = GetUserRoles().First().Id
-        },
-        new()
-        {
-            Id = Guid.NewGuid(),
-            Username = "User",
-            Password = "123456",
-            UserRoleId = GetUserRoles().Skip(count: 1).First().Id
         }
     };
 
@@ -55,11 +48,6 @@ public sealed class UserServiceDbContext : DbContext
         {
             Id = Guid.NewGuid(),
             Name = "Admin"
-        },
-        new()
-        {
-            Id = Guid.NewGuid(),
-            Name = "User"
         }
     };
 }

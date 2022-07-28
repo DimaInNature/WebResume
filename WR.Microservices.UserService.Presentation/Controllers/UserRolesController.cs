@@ -3,25 +3,24 @@
 [Produces(contentType: "application/json")]
 [ApiController]
 [Route(template: "[controller]")]
-public class UsersController : ControllerBase
+public class UserRolesController : ControllerBase
 {
-    private readonly IUserAppService _userService;
+    private readonly IUserRoleAppService _userService;
 
-    public UsersController(IUserAppService userService) =>
+    public UserRolesController(IUserRoleAppService userService) =>
         _userService = userService;
 
     /// <summary>
-    /// Get users.
+    /// Get user roles.
     /// </summary>
     /// <remarks>
     /// Request example:
     ///
-    ///     GET /Users
+    ///     GET /UserRoles
     ///
     /// </remarks>
-    /// <returns>Return all users.</returns>
-    /// <response code="200">Users list.</response>
-    [Authorize]
+    /// <returns>Return all user roles.</returns>
+    /// <response code="200">User roles list.</response>
     [Tags(tags: "Get")]
     [ProducesResponseType(statusCode: StatusCodes.Status200OK)]
     [ProducesResponseType(statusCode: StatusCodes.Status404NotFound)]
@@ -34,19 +33,18 @@ public class UsersController : ControllerBase
     }
 
     /// <summary>
-    /// Get user by Id.
+    /// Get user role by Id.
     /// </summary>
     /// <remarks>
     /// Request example:
     ///
-    ///     GET /Users/Guid
+    ///     GET /UserRoles/Guid
     ///
     /// </remarks>
     /// <param name="id">Id.</param>
     /// <returns>User.</returns>
-    /// <response code="200">User.</response>
-    /// <response code="404">If the user was not found.</response>
-    [Authorize]
+    /// <response code="200">User role.</response>
+    /// <response code="404">If the user role was not found.</response>
     [Tags(tags: "Get")]
     [ProducesResponseType(statusCode: StatusCodes.Status200OK)]
     [ProducesResponseType(statusCode: StatusCodes.Status404NotFound)]
@@ -59,55 +57,24 @@ public class UsersController : ControllerBase
     }
 
     /// <summary>
-    /// Get user by login and password.
+    /// Create user role.
     /// </summary>
     /// <remarks>
     /// Request example:
     ///
-    ///     GET /Users/Admin/Root
-    ///
-    /// </remarks>
-    /// <param name="username">Username.</param>
-    /// /// <param name="password">Password.</param>
-    /// <returns>User.</returns>
-    /// <response code="200">User.</response>
-    /// <response code="404">If the user was not found.</response>
-    [AllowAnonymous]
-    [Tags(tags: "Get")]
-    [ProducesResponseType(statusCode: StatusCodes.Status200OK)]
-    [ProducesResponseType(statusCode: StatusCodes.Status404NotFound)]
-    [HttpGet(template: "{username}/{password}")]
-    public async Task<ActionResult<UserEntity>> Get(string username, string password)
-    {
-        var result = await _userService.GetAsync(
-            predicate: user => user.Username == username &&
-            user.Password == password);
-
-        return result is not null ? Ok(value: result) : NotFound();
-    }
-
-    /// <summary>
-    /// Create user.
-    /// </summary>
-    /// <remarks>
-    /// Request example:
-    ///
-    ///     POST /Users
+    ///     POST /UserRoles
     ///     {
     ///         "id": Guid,
-    ///         "username": "Admin",
-    ///         "password": "123456",
-    ///         "userRoleId": Guid
+    ///         "name": "Admin"
     ///     }
     ///
     /// </remarks>
     /// <response code="201">Created.</response>
-    [AllowAnonymous]
     [Tags(tags: "Post")]
     [ProducesResponseType(statusCode: StatusCodes.Status201Created)]
     [ProducesResponseType(statusCode: StatusCodes.Status400BadRequest)]
     [HttpPost]
-    public async Task<ActionResult<UserEntity>> Create([FromBody] UserEntity user)
+    public async Task<ActionResult<UserRoleEntity>> Create([FromBody] UserRoleEntity user)
     {
         if (user is not null)
             await _userService.CreateAsync(entity: user);
@@ -116,27 +83,24 @@ public class UsersController : ControllerBase
     }
 
     /// <summary>
-    /// Update user.
+    /// Update user role.
     /// </summary>
     /// <remarks>
     /// Request example:
     ///
-    ///     PUT /Users
+    ///     PUT /UserRoles
     ///     {
     ///         "id": Guid,
-    ///         "username": "Admin",
-    ///         "password": "123456",
-    ///         "userRoleId": Guid
+    ///         "name": "Admin"
     ///     }
     ///
     /// </remarks>
     /// <response code="204">The object has been successfully modified.</response>
-    [Authorize]
     [Tags(tags: "Put")]
     [ProducesResponseType(statusCode: StatusCodes.Status204NoContent)]
     [ProducesResponseType(statusCode: StatusCodes.Status400BadRequest)]
     [HttpPut]
-    public async Task<ActionResult> Update([FromBody] UserEntity user)
+    public async Task<ActionResult> Update([FromBody] UserRoleEntity user)
     {
         if (user is not null)
             await _userService.UpdateAsync(entity: user);
@@ -145,16 +109,15 @@ public class UsersController : ControllerBase
     }
 
     /// <summary>
-    /// Delete user.
+    /// Delete user role.
     /// </summary>
     /// <remarks>
     /// Request example:
     ///
-    ///     DELETE /Users/Guid
+    ///     DELETE /UserRoles/Guid
     ///
     /// </remarks>
     /// <response code="204">The object has been successfully deleted.</response>
-    [Authorize]
     [Tags(tags: "Delete")]
     [ProducesResponseType(statusCode: StatusCodes.Status204NoContent)]
     [ProducesResponseType(statusCode: StatusCodes.Status400BadRequest)]

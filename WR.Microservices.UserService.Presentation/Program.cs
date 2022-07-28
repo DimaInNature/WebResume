@@ -1,25 +1,53 @@
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+RegisterServices(services: builder.Services);
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
+Configure(app: app);
 
 app.Run();
+
+void RegisterServices(IServiceCollection services)
+{
+    // Jwt Auth
+    services.AddAuthentication(builder);
+
+    services.AddCors();
+
+    // Setting DBContext
+    services.AddDatabaseConfiguration(configuration: builder.Configuration);
+
+    // Swagger
+    services.AddSwaggerConfiguration();
+
+    // .NET Native DI Abstraction
+    services.RegisterServices();
+
+    // MediatR
+    services.AddMediatRConfiguration();
+
+    services.AddControllers();
+}
+
+void Configure(WebApplication app)
+{
+    app.UseHttpsRedirection();
+
+    app.UseCors(cors =>
+    {
+        cors.AllowAnyHeader();
+        cors.AllowAnyMethod();
+        cors.AllowAnyOrigin();
+    });
+
+    app.UseStaticFiles();
+
+    app.UseAuthentication();
+
+    app.UseAuthorization();
+
+    app.MapControllers();
+
+    app.UseSwaggerSetup();
+}
