@@ -7,28 +7,18 @@ public sealed class ContactMessageAppService : IContactMessageAppService
     public ContactMessageAppService(IMediator mediator) =>
         _mediator = mediator;
 
-    public Task<IEnumerable<ContactMessage>> GetAllAsync()
-    {
-        throw new NotImplementedException();
-    }
+    public async Task<IEnumerable<ContactMessage>> GetAllAsync() =>
+        await _mediator.Send(request: new GetContactMessageListQuery());
 
-    public Task<ContactMessage?> GetAsync(Guid key)
-    {
-        throw new NotImplementedException();
-    }
+    public async Task<ContactMessage?> GetAsync(Guid id) =>
+        await _mediator.Send(request: new GetContactMessageByIdQuery(id));
 
-    public Task CreateAsync(ContactMessage entity)
-    {
-        throw new NotImplementedException();
-    }
+    public async Task CreateAsync(ContactMessage entity) =>
+        await _mediator.Send(request: new CreateContactMessageCommand(entity));
 
-    public Task UpdateAsync(ContactMessage entity)
-    {
-        throw new NotImplementedException();
-    }
+    public async Task UpdateAsync(ContactMessage entity) =>
+        await _mediator.Send(request: new UpdateContactMessageCommand(entity));
 
-    public Task DeleteAsync(Guid key)
-    {
-        throw new NotImplementedException();
-    }
+    public async Task DeleteAsync(Guid id) =>
+        await _mediator.Send(request: new UpdateContactMessageCommand(id));
 }
