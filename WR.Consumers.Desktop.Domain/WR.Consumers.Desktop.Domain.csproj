@@ -7,8 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\Users\" />
-    <Folder Include="Queries\Users\" />
+    <Folder Include="Queries\Auth\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WR.Consumers.Desktop.Domain.Core\WR.Consumers.Desktop.Domain.Core.csproj" />
+    <ProjectReference Include="..\WR.Shared.Domain\WR.Shared.Domain.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-﻿namespace WR.Consumers.Desktop.Domain.Core;
+﻿namespace WR.Consumers.Desktop.Domain.Core.Models;
 
 public class ContactMessage
 {

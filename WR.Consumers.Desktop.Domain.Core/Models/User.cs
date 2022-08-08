@@ -8,5 +8,16 @@ public class User
 
     public string Password { get; set; } = string.Empty;
 
-    public User(string username, string password) => (Username, Password) = (username, password);
+    public UserRole? UserRole { get; set; }
+
+    public Guid? UserRoleId { get; set; }
+
+    public User(string username, string password) =>
+        (Username, Password) = (username, password);
+
+    public User(string username, string password, Guid userRoleId)
+        : this(username, password) =>
+        UserRoleId = userRoleId;
+
+    public User() { }
 }
