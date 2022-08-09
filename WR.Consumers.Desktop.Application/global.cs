@@ -1,10 +1,13 @@
 ﻿global using MediatR;
 global using System;
 global using System.Collections.Generic;
+global using System.Linq;
 global using System.Threading.Tasks;
 global using WR.Consumers.Desktop.Application.Interfaces;
 global using WR.Consumers.Desktop.Domain.Commands.ContactMessages;
+global using WR.Consumers.Desktop.Domain.Commands.UserRoles;
 global using WR.Consumers.Desktop.Domain.Commands.Users;
 global using WR.Consumers.Desktop.Domain.Core.Models;
 global using WR.Consumers.Desktop.Domain.Queries.ContactMessages;
+global using WR.Consumers.Desktop.Domain.Queries.UserRoles;
 global using WR.Consumers.Desktop.Domain.Queries.Users;

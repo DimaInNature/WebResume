@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <Folder Include="Content\Fonts\" />
-    <Folder Include="ViewModels\UserControls\" />
+    <Folder Include="ViewModels\UserControls\PetProjects\" />
     <Folder Include="Views\UserControls\" />
   </ItemGroup>
 
