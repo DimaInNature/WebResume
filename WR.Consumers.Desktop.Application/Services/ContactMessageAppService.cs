@@ -20,5 +20,5 @@ public sealed class ContactMessageAppService : IContactMessageAppService
         await _mediator.Send(request: new UpdateContactMessageCommand(entity));
 
     public async Task DeleteAsync(Guid id) =>
-        await _mediator.Send(request: new UpdateContactMessageCommand(id));
+        await _mediator.Send(request: new DeleteContactMessageCommand(id));
 }

@@ -1,6 +1,6 @@
 ﻿namespace WR.Consumers.Desktop.Presentation.ViewModels;
 
-internal sealed class LoginViewModel : BaseViewModel
+public sealed class LoginViewModel : BaseViewModel
 {
     #region Members
 
@@ -108,7 +108,6 @@ internal sealed class LoginViewModel : BaseViewModel
     #endregion
 
     #region Dependencies
-
 
     #endregion
 

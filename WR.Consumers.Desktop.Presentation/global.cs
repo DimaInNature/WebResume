@@ -1,11 +1,17 @@
 ﻿global using MediatR;
+global using Microsoft.Extensions.Configuration;
 global using Microsoft.Extensions.DependencyInjection;
 global using System;
+global using System.IO;
 global using System.Reflection;
 global using System.Runtime.InteropServices;
 global using System.Security;
 global using System.Windows;
 global using System.Windows.Input;
 global using WR.Consumers.Desktop.Domain.Core.MVVM.ViewModels;
+global using WR.Consumers.Desktop.Infra.IoC;
+global using WR.Consumers.Desktop.Presentation.Configurations;
 global using WR.Consumers.Desktop.Presentation.Configurations.MediatR;
+global using WR.Consumers.Desktop.Presentation.ViewModels;
 global using WR.Consumers.Desktop.Presentation.Views;
+global using ThisApplication = System.Windows.Application;

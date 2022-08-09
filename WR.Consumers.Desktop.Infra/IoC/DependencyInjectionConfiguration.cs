@@ -12,15 +12,4 @@ public static class DependencyInjectionConfiguration
 
         services.AddTransient<IContactMessageAppService, ContactMessageAppService>();
     }
-
-    public static void AddViewModelsConfiguration(this IServiceCollection services)
-    {
-        if (services is null) throw new ArgumentNullException(nameof(services));
-
-        services.Scan(action: scan =>
-            scan.FromAssemblyOf<BaseViewModel>()
-        .AddClasses(action: classes =>
-            classes.Where(predicate: type =>
-                type.Name.EndsWith(value: "ViewModel"))));
-    }
 }
