@@ -12,17 +12,18 @@ public partial class App : ThisApplication
 
     protected override void OnStartup(StartupEventArgs e)
     {
-        var serviceCollection = new ServiceCollection();
+        ServiceCollection services = new();
 
-        ConfigureServices(services: serviceCollection);
+        ConfigureServices(services);
 
-        ServiceProvider = serviceCollection.BuildServiceProvider();
+        ServiceProvider = services.BuildServiceProvider();
 
         new LoginView().Show();
     }
 
     private void ConfigureServices(IServiceCollection services)
     {
+        // Configure IConfiguration (^_^)
         services.AddSingleton(Configuration);
 
         // .NET Native DI Abstraction

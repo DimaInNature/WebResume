@@ -1,6 +1,6 @@
 ﻿namespace WR.Consumers.Desktop.Presentation.ViewModels.UserControls;
 
-public sealed class CreateUsersViewModel : BaseCreateViewModel
+internal sealed class CreateUsersViewModel : BaseCreateViewModel
 {
     private readonly IUserAppService _userService;
 

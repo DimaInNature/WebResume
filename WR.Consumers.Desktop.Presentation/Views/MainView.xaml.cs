@@ -5,5 +5,7 @@ public partial class MainView : Window
     public MainView()
     {
         InitializeComponent();
+
+        DataContext = ViewModelConnector.Connect<MainViewModel>();
     }
 }

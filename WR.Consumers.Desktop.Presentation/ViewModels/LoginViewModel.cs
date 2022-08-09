@@ -1,12 +1,12 @@
 ﻿namespace WR.Consumers.Desktop.Presentation.ViewModels;
 
-public sealed class LoginViewModel : BaseViewModel
+internal sealed class LoginViewModel : BaseViewModel
 {
-    #region Members
+    #region Acessors
 
-    public bool IsConnectionStopped = false;
+    public ICommand? LoginCommand { get; private set; }
 
-    #region Properties
+    public ICommand? RegistrationCommand { get; private set; }
 
     public string EnterUserLogin
     {
@@ -68,18 +68,6 @@ public sealed class LoginViewModel : BaseViewModel
         }
     }
 
-    #endregion
-
-    #region Commands
-
-    public ICommand? LoginCommand { get; private set; }
-
-    public ICommand? RegistrationCommand { get; private set; }
-
-    #endregion
-
-    #region View
-
     public bool IsPasswordWatermarkVisible
     {
         get => _isPasswordWatermarkVisible;
@@ -107,9 +95,5 @@ public sealed class LoginViewModel : BaseViewModel
 
     #endregion
 
-    #region Dependencies
-
-    #endregion
-
-    #endregion
+    public bool IsConnectionStopped = false;
 }
