@@ -9,6 +9,60 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Content\Images\Controls\WindowsControlButtons\Light\Default\ControlButtonClose.png" />
+    <None Remove="Content\Images\Controls\WindowsControlButtons\Light\Default\ControlButtonMaximazed.png" />
+    <None Remove="Content\Images\Controls\WindowsControlButtons\Light\Default\ControlButtonRollUp.png" />
+    <None Remove="Content\Images\Controls\WindowsControlButtons\Light\MouseEnter\ControlButtonCloseMouseEnter.png" />
+    <None Remove="Content\Images\Controls\WindowsControlButtons\Light\MouseEnter\ControlButtonMaximazedMouseEnter.png" />
+    <None Remove="Content\Images\Controls\WindowsControlButtons\Light\MouseEnter\ControlButtonRollUpMouseEnter.png" />
+    <None Remove="Content\Images\Parallax\fifth.jpg" />
+    <None Remove="Content\Images\Parallax\first.jpg" />
+    <None Remove="Content\Images\Parallax\fourth.jpg" />
+    <None Remove="Content\Images\Parallax\second.jpg" />
+    <None Remove="Content\Images\Parallax\sixth.jpg" />
+    <None Remove="Content\Images\Parallax\third.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Content\Images\Controls\WindowsControlButtons\Light\Default\ControlButtonClose.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\Controls\WindowsControlButtons\Light\Default\ControlButtonMaximazed.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\Controls\WindowsControlButtons\Light\Default\ControlButtonRollUp.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\Controls\WindowsControlButtons\Light\MouseEnter\ControlButtonCloseMouseEnter.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\Controls\WindowsControlButtons\Light\MouseEnter\ControlButtonMaximazedMouseEnter.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\Controls\WindowsControlButtons\Light\MouseEnter\ControlButtonRollUpMouseEnter.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\Parallax\fifth.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\Parallax\first.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\Parallax\fourth.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\Parallax\second.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\Parallax\sixth.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\Parallax\third.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Content\Fonts\" />
     <Folder Include="ViewModels\UserControls\PetProjects\" />
   </ItemGroup>
@@ -20,6 +74,7 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0-preview.6.22324.4" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
   </ItemGroup>
 
   <ItemGroup>

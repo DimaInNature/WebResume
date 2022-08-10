@@ -2,7 +2,7 @@
 
 internal static class ViewModelConnector
 {
-    public static TViewModel? Connect<TViewModel>(string? viewModelName = default)
+    public static TViewModel Connect<TViewModel>(string? viewModelName = default)
         where TViewModel : BaseViewModel
     {
         TViewModel? viewModel = (ThisApplication.Current as App)?
@@ -12,6 +12,6 @@ internal static class ViewModelConnector
             model: viewModel,
             message: viewModelName ?? typeof(TViewModel).Name);
 
-        return viewModel;
+        return viewModel ?? throw new ViewModelNotFoundException(message: typeof(TViewModel).Name);
     }
 }

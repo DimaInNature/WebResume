@@ -1,6 +1,7 @@
 ﻿global using MediatR;
 global using Microsoft.Extensions.Configuration;
 global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Xaml.Behaviors;
 global using System;
 global using System.Collections.Generic;
 global using System.IO;
@@ -12,6 +13,7 @@ global using System.Threading.Tasks;
 global using System.Windows;
 global using System.Windows.Controls;
 global using System.Windows.Input;
+global using System.Windows.Media;
 global using WR.Consumers.Desktop.Application.Exceptions;
 global using WR.Consumers.Desktop.Application.Extensions;
 global using WR.Consumers.Desktop.Application.Interfaces;
