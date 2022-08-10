@@ -13,7 +13,11 @@ public sealed record class CreateContactMessageCommandHandler
         CreateContactMessageCommand request,
         CancellationToken token)
     {
-        if (request.ContactMessage is null) return default;
+        if (request.ContactMessage is null
+            or { Message: "" }
+            or { SenderEmail: "" }
+            or { SenderName: "" })
+            return default;
 
         HttpSender sender = new(hostUri: _configuration[key: "Routes:Gateway"]);
 

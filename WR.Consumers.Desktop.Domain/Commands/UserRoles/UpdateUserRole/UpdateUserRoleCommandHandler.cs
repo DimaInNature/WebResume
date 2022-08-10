@@ -13,7 +13,9 @@ public sealed record class UpdateUserRoleCommandHandler
         UpdateUserRoleCommand request,
         CancellationToken token)
     {
-        if (request.UserRole is null) return default;
+        if (request.UserRole is null
+            or { Name: "" })
+            return default;
 
         HttpSender sender = new(hostUri: _configuration[key: "Routes:Gateway"]);
 

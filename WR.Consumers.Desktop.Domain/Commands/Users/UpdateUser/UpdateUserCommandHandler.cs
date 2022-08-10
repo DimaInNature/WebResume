@@ -13,7 +13,10 @@ public sealed record class UpdateUserCommandHandler
         UpdateUserCommand request,
         CancellationToken token)
     {
-        if (request.User is null) return default;
+        if (request.User is null
+            or { Username: "" }
+            or { Password: "" })
+            return default;
 
         HttpSender sender = new(hostUri: _configuration[key: "Routes:Gateway"]);
 
