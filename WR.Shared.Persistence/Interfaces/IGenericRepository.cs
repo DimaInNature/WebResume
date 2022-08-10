@@ -7,9 +7,8 @@ public interface IGenericRepository<TEntity>
 
     public Task<TEntity?> GetFirstOrDefaultAsync(Guid key, CancellationToken token);
 
-    public Task<TEntity?> GetFirstOrDefaultWithIncludeAsync(
-        Expression<Func<TEntity, bool>> predicate,
-        CancellationToken token,
+    public TEntity? GetFirstOrDefaultWithInclude(
+        Func<TEntity, bool> predicate,
         params Expression<Func<TEntity, object>>[] includeProperties);
 
     public IEnumerable<TEntity> GetAll();

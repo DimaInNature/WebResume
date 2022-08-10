@@ -23,12 +23,10 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity>
         await _dbSet.AsNoTracking()
         .FirstOrDefaultAsync(predicate, cancellationToken: token);
 
-    public async Task<TEntity?> GetFirstOrDefaultWithIncludeAsync(
-        Expression<Func<TEntity, bool>> predicate,
-        CancellationToken token,
+    public TEntity? GetFirstOrDefaultWithInclude(
+        Func<TEntity, bool> predicate,
         params Expression<Func<TEntity, object>>[] includeProperties) =>
-        await Include(includeProperties)
-        .FirstOrDefaultAsync(predicate, token);
+         IncludeWithNoTracking(includeProperties).FirstOrDefault(predicate);
 
     public IEnumerable<TEntity> GetAll() => _dbSet.AsNoTracking();
 
@@ -37,12 +35,12 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity>
 
     public IEnumerable<TEntity> GetAllWithInclude(
         params Expression<Func<TEntity, object>>[] includeProperties) =>
-        Include(includeProperties);
+        IncludeWithNoTracking(includeProperties);
 
     public IEnumerable<TEntity> GetAllWithInclude(
         Func<TEntity, bool> predicate,
         params Expression<Func<TEntity, object>>[] includeProperties) =>
-        Include(includeProperties).Where(predicate);
+        IncludeWithNoTracking(includeProperties).Where(predicate);
 
     public async Task<bool> CreateAsync(TEntity entity, CancellationToken token)
     {
@@ -79,10 +77,17 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity>
         return await _context.SaveChangesAsync(cancellationToken: token) == 1;
     }
 
-    private IQueryable<TEntity> Include(
-        params Expression<Func<TEntity, object>>[] includeProperties) =>
-        includeProperties.Aggregate(
-            seed: _dbSet.AsNoTracking(),
-            func: (current, includeProperty) =>
-                current.Include(navigationPropertyPath: includeProperty));
+    private IEnumerable<TEntity> Include(
+         params Expression<Func<TEntity, object>>[] _includeProperties) =>
+         _includeProperties.Aggregate(
+             seed: _dbSet.AsQueryable(),
+             func: (current, includeProperty) =>
+             current.Include(includeProperty));
+
+    private IEnumerable<TEntity> IncludeWithNoTracking(
+         params Expression<Func<TEntity, object>>[] _includeProperties) =>
+         _includeProperties.Aggregate(
+             seed: _dbSet.AsNoTracking(),
+             func: (current, includeProperty) =>
+             current.Include(includeProperty));
 }

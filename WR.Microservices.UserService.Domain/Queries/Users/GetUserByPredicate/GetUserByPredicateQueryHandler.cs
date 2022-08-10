@@ -13,11 +13,11 @@ public sealed record class GetUserByPredicateQueryHandler
         GetUserByPredicateQuery request,
         CancellationToken token)
     {
-        if(request.Predicate is null) return null;
-        
-        return await _repository.GetFirstOrDefaultWithIncludeAsync(
-            predicate: user => request.Predicate(user),
-            token, 
+        if (request.Predicate is null) return null;
+
+        return _repository.GetFirstOrDefaultWithInclude(
+            predicate: user => request.Predicate(user) &&
+            user.UserRole is not null,
             includeProperties: prop => prop.UserRole);
     }
 }
