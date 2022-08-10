@@ -5,9 +5,206 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:WR.Consumers.Desktop.Presentation.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="MainView"
     Width="800"
-    Height="450"
+    Height="600"
+    MinWidth="800"
+    MinHeight="600"
+    AllowsTransparency="True"
+    Background="Transparent"
+    MouseLeftButtonDown="Window_MouseLeftDown"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
     mc:Ignorable="d">
-    <Grid />
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="0" ResizeBorderThickness="10" />
+    </WindowChrome.WindowChrome>
+
+    <Border Background="#010409" CornerRadius="20">
+
+        <Grid>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.335*" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.100*" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <!--#region Logo-->
+
+            <Border
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                HorizontalAlignment="Center"
+                Panel.ZIndex="1"
+                Background="#161b22 ">
+
+                <Grid Margin="5,0,0,0">
+
+                    <TextBlock
+                        Margin="0,2,0,0"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center"
+                        FontFamily="Microsoft YaHei UI"
+                        FontSize="22"
+                        Foreground="#f0f6fc"
+                        Text="Web Resume" />
+
+                </Grid>
+
+            </Border>
+
+            <!--#endregion-->
+
+            <!--#region Menu-->
+
+            <StackPanel
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="0"
+                Background="#0d1117">
+
+                <RadioButton
+                    x:Name="HomeMenuButton"
+                    Width="200"
+                    Height="50"
+                    HorizontalAlignment="Left"
+                    Click="HomeButton_Click"
+                    Content="../WR/Home/"
+                    FontFamily="Microsoft YaHei UI"
+                    FontSize="15"
+                    Foreground="#f0f6fc"
+                    IsChecked="True"
+                    Style="{StaticResource ac_MenuButtonStyle}" />
+
+                <RadioButton
+                    x:Name="CreateMenuButton"
+                    Width="200"
+                    Height="50"
+                    HorizontalAlignment="Left"
+                    Click="CreateButton_Click"
+                    Content="../WR/Create/"
+                    FontFamily="Microsoft YaHei UI"
+                    FontSize="15"
+                    Foreground="#f0f6fc"
+                    Style="{StaticResource ac_MenuButtonStyle}" />
+
+                <RadioButton
+                    x:Name="ReadMenuButton"
+                    Width="200"
+                    Height="50"
+                    HorizontalAlignment="Left"
+                    Click="ReadButton_Click"
+                    Content="../WR/Read/"
+                    FontFamily="Microsoft YaHei UI"
+                    FontSize="15"
+                    Foreground="#f0f6fc"
+                    Style="{StaticResource ac_MenuButtonStyle}" />
+
+                <RadioButton
+                    x:Name="UpdateMenuButton"
+                    Width="200"
+                    Height="50"
+                    HorizontalAlignment="Left"
+                    Click="UpdateButton_Click"
+                    Content="../WR/Update/"
+                    FontFamily="Microsoft YaHei UI"
+                    FontSize="15"
+                    Foreground="#f0f6fc"
+                    Style="{StaticResource ac_MenuButtonStyle}" />
+
+                <RadioButton
+                    x:Name="DeleteMenuButton"
+                    Width="200"
+                    Height="50"
+                    HorizontalAlignment="Left"
+                    Click="DeleteButton_Click"
+                    Content="..WR/Delete/"
+                    FontFamily="Microsoft YaHei UI"
+                    FontSize="15"
+                    Foreground="#f0f6fc"
+                    Style="{StaticResource ac_MenuButtonStyle}" />
+
+                <RadioButton
+                    x:Name="LogoutMenuButton"
+                    Width="200"
+                    Height="50"
+                    HorizontalAlignment="Left"
+                    Click="LogoutMenuButton_Click"
+                    Content="cmd: /sesKill -s"
+                    FontFamily="Microsoft YaHei UI"
+                    FontSize="15"
+                    Foreground="#f0f6fc"
+                    Style="{StaticResource ac_MenuButtonStyle}" />
+
+            </StackPanel>
+
+            <!--#endregion-->
+
+            <!--#region Top-->
+
+            <Grid
+                Grid.Row="0"
+                Grid.Column="0"
+                Background="#161b22 ">
+
+                <Viewbox
+                    Margin="10"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+                    <TextBlock
+                        x:Name="ActiveUserNameTextBlock"
+                        FontFamily="Spectral Light"
+                        FontStyle="Italic"
+                        FontWeight="ExtraLight" />
+                </Viewbox>
+
+
+            </Grid>
+
+            <Border Grid.Column="1" Background="#161b22 ">
+
+                <Grid>
+
+                    <Button
+                        x:Name="RollUpButton"
+                        Margin="0,0,90,20"
+                        Click="RollUpButton_Click"
+                        Style="{StaticResource c_ControlButtonRollUpStyle}" />
+
+                    <Button
+                        x:Name="MaximazedButton"
+                        Margin="0,0,55,20"
+                        Click="MaximazedButton_Click"
+                        Style="{StaticResource c_ControlButtonMaximazedStyle}" />
+
+                    <Button
+                        x:Name="ExitButton"
+                        Margin="0,0,20,20"
+                        Click="ExitButton_Click"
+                        Style="{StaticResource c_ControlButtonCloseStyle}" />
+
+                </Grid>
+
+            </Border>
+
+            <!--#endregion-->
+
+            <Frame
+                x:Name="MenuFrame"
+                Grid.Row="1"
+                Grid.Column="1"
+                Margin="0,10,25,10"
+                Content="{x:Null}"
+                NavigationUIVisibility="Hidden"
+                Visibility="Collapsed" />
+
+        </Grid>
+
+    </Border>
+
 </Window>

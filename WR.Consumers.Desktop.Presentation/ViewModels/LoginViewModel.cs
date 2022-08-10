@@ -136,7 +136,7 @@ internal sealed class LoginViewModel : BaseViewModel
             return;
         }
 
-        (obj as MainView)?.Show();
+        new MainView().Show();
 
         (obj as Window)?.Close();
 
@@ -152,9 +152,9 @@ internal sealed class LoginViewModel : BaseViewModel
 
         User? createdUser = await _userAppService.CreateAsync(entity: user);
 
-        if(createdUser is null)
+        if (createdUser is null)
         {
-            if(string.IsNullOrWhiteSpace(value: createdUser?.Username) is false)
+            if (string.IsNullOrWhiteSpace(value: createdUser?.Username) is false)
             {
                 MessageBox.Show(
                     messageBoxText: "User is already exists.",

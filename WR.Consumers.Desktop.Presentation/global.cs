@@ -25,4 +25,5 @@ global using WR.Consumers.Desktop.Presentation.Connectors;
 global using WR.Consumers.Desktop.Presentation.ViewModels;
 global using WR.Consumers.Desktop.Presentation.ViewModels.UserControls;
 global using WR.Consumers.Desktop.Presentation.Views;
+global using WR.Consumers.Desktop.Presentation.Views.UserControls.Menus;
 global using ThisApplication = System.Windows.Application;
