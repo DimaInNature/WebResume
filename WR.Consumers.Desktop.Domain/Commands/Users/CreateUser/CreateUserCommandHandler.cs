@@ -1,7 +1,7 @@
 ﻿namespace WR.Consumers.Desktop.Domain.Commands.Users;
 
 public sealed record class CreateUserCommandHandler
-    : IRequestHandler<CreateUserCommand>
+    : IRequestHandler<CreateUserCommand, User?>
 {
     private readonly IConfiguration _configuration;
 
@@ -9,7 +9,7 @@ public sealed record class CreateUserCommandHandler
         IConfiguration configuration) =>
         _configuration = configuration;
 
-    public async Task<Unit> Handle(
+    public async Task<User?> Handle(
         CreateUserCommand request,
         CancellationToken token)
     {
@@ -20,11 +20,11 @@ public sealed record class CreateUserCommandHandler
 
         HttpSender sender = new(hostUri: _configuration[key: "Routes:Gateway"]);
 
-        await sender.PostAsync(
+        var response = await sender.PostAndReturnAsync(
             routePath: _configuration[key: "Routes:Users:CreateUser"],
             serializableObj: request.User,
             cancellationToken: token);
 
-        return default;
+        return response;
     }
 }

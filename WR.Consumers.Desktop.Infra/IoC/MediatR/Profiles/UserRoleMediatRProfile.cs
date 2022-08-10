@@ -1,6 +1,6 @@
 ﻿namespace WR.Consumers.Desktop.Infra.IoC.MediatR.Profiles;
 
-internal static class UserRoleMediatRProfile
+public static class UserRoleMediatRProfile
 {
     public static void AddUserRoleMediatRProfile(this IServiceCollection services)
     {

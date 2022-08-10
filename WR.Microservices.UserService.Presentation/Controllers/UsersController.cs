@@ -21,7 +21,7 @@ public class UsersController : ControllerBase
     /// </remarks>
     /// <returns>Return all users.</returns>
     /// <response code="200">Users list.</response>
-    [Authorize]
+    //[Authorize]
     [Tags(tags: "Get")]
     [ProducesResponseType(statusCode: StatusCodes.Status200OK)]
     [ProducesResponseType(statusCode: StatusCodes.Status404NotFound)]
@@ -46,7 +46,7 @@ public class UsersController : ControllerBase
     /// <returns>User.</returns>
     /// <response code="200">User.</response>
     /// <response code="404">If the user was not found.</response>
-    [Authorize]
+    //[Authorize]
     [Tags(tags: "Get")]
     [ProducesResponseType(statusCode: StatusCodes.Status200OK)]
     [ProducesResponseType(statusCode: StatusCodes.Status404NotFound)]
@@ -68,11 +68,11 @@ public class UsersController : ControllerBase
     ///
     /// </remarks>
     /// <param name="username">Username.</param>
-    /// /// <param name="password">Password.</param>
+    /// <param name="password">Password.</param>
     /// <returns>User.</returns>
     /// <response code="200">User.</response>
     /// <response code="404">If the user was not found.</response>
-    [AllowAnonymous]
+    //[AllowAnonymous]
     [Tags(tags: "Get")]
     [ProducesResponseType(statusCode: StatusCodes.Status200OK)]
     [ProducesResponseType(statusCode: StatusCodes.Status404NotFound)]
@@ -102,7 +102,7 @@ public class UsersController : ControllerBase
     ///
     /// </remarks>
     /// <response code="201">Created.</response>
-    [AllowAnonymous]
+    //[AllowAnonymous]
     [Tags(tags: "Post")]
     [ProducesResponseType(statusCode: StatusCodes.Status201Created)]
     [ProducesResponseType(statusCode: StatusCodes.Status400BadRequest)]
@@ -131,7 +131,7 @@ public class UsersController : ControllerBase
     ///
     /// </remarks>
     /// <response code="204">The object has been successfully modified.</response>
-    [Authorize]
+    //[Authorize]
     [Tags(tags: "Put")]
     [ProducesResponseType(statusCode: StatusCodes.Status204NoContent)]
     [ProducesResponseType(statusCode: StatusCodes.Status400BadRequest)]
@@ -154,7 +154,7 @@ public class UsersController : ControllerBase
     ///
     /// </remarks>
     /// <response code="204">The object has been successfully deleted.</response>
-    [Authorize]
+    //[Authorize]
     [Tags(tags: "Delete")]
     [ProducesResponseType(statusCode: StatusCodes.Status204NoContent)]
     [ProducesResponseType(statusCode: StatusCodes.Status400BadRequest)]

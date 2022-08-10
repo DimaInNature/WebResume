@@ -144,7 +144,10 @@
                 </I:Interaction.Behaviors>
             </Image>
 
-            <Grid Grid.Row="0" Background="{StaticResource BaseColorBackground}" Opacity="0.85">
+            <Grid
+                Grid.Row="0"
+                Background="{StaticResource BaseColorBackground}"
+                Opacity="0.85">
 
                 <TextBlock
                     Margin="0,2,0,0"

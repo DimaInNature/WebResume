@@ -7,7 +7,6 @@ global using WR.Consumers.Desktop.Domain.Commands.ContactMessages;
 global using WR.Consumers.Desktop.Domain.Commands.UserRoles;
 global using WR.Consumers.Desktop.Domain.Commands.Users;
 global using WR.Consumers.Desktop.Domain.Core.Models;
-global using WR.Consumers.Desktop.Domain.Core.MVVM.ViewModels;
 global using WR.Consumers.Desktop.Domain.Queries.ContactMessages;
 global using WR.Consumers.Desktop.Domain.Queries.PetProjects;
 global using WR.Consumers.Desktop.Domain.Queries.UserRoles;

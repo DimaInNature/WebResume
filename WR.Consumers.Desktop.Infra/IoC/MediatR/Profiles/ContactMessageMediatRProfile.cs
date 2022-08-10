@@ -1,6 +1,6 @@
 ﻿namespace WR.Consumers.Desktop.Infra.IoC.MediatR.Profiles;
 
-internal static class ContactMessageMediatRProfile
+public static class ContactMessageMediatRProfile
 {
     public static void AddContactMessageMediatRProfile(this IServiceCollection services)
     {

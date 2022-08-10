@@ -1,6 +1,6 @@
 ﻿namespace WR.Consumers.Desktop.Infra.IoC.MediatR.Profiles;
 
-internal static class PetProjectMediatRProfile
+public static class PetProjectMediatRProfile
 {
     public static void AddPetProjectMediatRProfile(this IServiceCollection services)
     {

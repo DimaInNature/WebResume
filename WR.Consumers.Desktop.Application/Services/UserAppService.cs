@@ -15,7 +15,7 @@ public class UserAppService : IUserAppService
     public async Task<IEnumerable<User>> GetAllAsync() =>
         await _mediator.Send(request: new GetUserListQuery());
 
-    public async Task CreateAsync(User entity) =>
+    public async Task<User> CreateAsync(User entity) =>
         await _mediator.Send(request: new CreateUserCommand(entity));
 
     public async Task UpdateAsync(User entity) =>

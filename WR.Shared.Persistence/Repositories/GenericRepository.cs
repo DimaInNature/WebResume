@@ -28,8 +28,7 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity>
         CancellationToken token,
         params Expression<Func<TEntity, object>>[] includeProperties) =>
         await Include(includeProperties)
-        .Where(predicate)
-        .FirstOrDefaultAsync(token);
+        .FirstOrDefaultAsync(predicate, token);
 
     public IEnumerable<TEntity> GetAll() => _dbSet.AsNoTracking();
 

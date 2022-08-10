@@ -8,7 +8,7 @@ public interface IUserAppService
 
     public Task<IEnumerable<User>> GetAllAsync();
 
-    public Task CreateAsync(User entity);
+    public Task<User?> CreateAsync(User entity);
 
     public Task UpdateAsync(User entity);
 

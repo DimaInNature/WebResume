@@ -1,6 +1,6 @@
 ﻿namespace WR.Consumers.Desktop.Infra.IoC.MediatR.Profiles;
 
-internal static class UserMediatRProfile
+public static class UserMediatRProfile
 {
     public static void AddUserMediatRProfile(this IServiceCollection services)
     {
@@ -21,8 +21,8 @@ internal static class UserMediatRProfile
 
         #region Commands
 
-        services.AddScoped<IRequest<Unit>, CreateUserCommand>();
-        services.AddScoped<IRequestHandler<CreateUserCommand, Unit>, CreateUserCommandHandler>();
+        services.AddScoped<IRequest<User?>, CreateUserCommand>();
+        services.AddScoped<IRequestHandler<CreateUserCommand, User?>, CreateUserCommandHandler>();
 
         services.AddScoped<IRequest<Unit>, UpdateUserCommand>();
         services.AddScoped<IRequestHandler<UpdateUserCommand, Unit>, UpdateUserCommandHandler>();
