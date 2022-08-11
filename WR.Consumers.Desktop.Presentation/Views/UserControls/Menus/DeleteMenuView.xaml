@@ -15,7 +15,7 @@
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="80" />
-                <RowDefinition Height="1.2*" />
+                <RowDefinition />
                 <RowDefinition />
             </Grid.RowDefinitions>
 
@@ -51,6 +51,22 @@
                     Background="#21262d"
                     Click="ContactMessagesButton_Click"
                     Content="Contact messages" />
+
+            </Grid>
+
+            <Grid Grid.Row="2">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Button
+                    x:Name="UserRoleButton"
+                    Margin="10,0,15,15"
+                    Background="#21262d"
+                    Click="UserRoleButton_Click"
+                    Content="User roles" />
 
             </Grid>
 

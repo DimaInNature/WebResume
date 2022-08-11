@@ -17,5 +17,10 @@ public static class ViewModelsConfiguration
 
         services.AddTransient<DeleteContactMessagesViewModel>();
         services.AddTransient<ReadContactMessagesViewModel>();
+
+        services.AddTransient<CreateUserRolesViewModel>();
+        services.AddTransient<ReadUserRolesViewModel>();
+        services.AddTransient<UpdateUserRolesViewModel>();
+        services.AddTransient<DeleteUserRolesViewModel>();
     }
 }

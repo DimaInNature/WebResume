@@ -71,7 +71,13 @@
                     Click="PetProjectsButton_Click"
                     Content="Pet projects" />
 
-
+                <Button
+                    x:Name="UserRoleButton"
+                    Grid.Column="1"
+                    Margin="10,0,15,15"
+                    Background="#21262d"
+                    Click="UserRoleButton_Click"
+                    Content="User roles" />
 
             </Grid>
 

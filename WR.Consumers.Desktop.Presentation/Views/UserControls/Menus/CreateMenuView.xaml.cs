@@ -7,9 +7,12 @@ public partial class CreateMenuView : UserControl
     private void UserButton_Click(object sender, RoutedEventArgs e) =>
         SetFrame(source: new CreateUsersView());
 
+    private void UserRoleButton_Click(object sender, RoutedEventArgs e) =>
+        SetFrame(source: new CreateUserRolesView());
+
     private void SetFrame(ContentControl source)
     {
-        if (source is null) throw new NullReferenceException(nameof(source));
+        ArgumentNullException.ThrowIfNull(argument: source);
 
         CollapseBody();
 

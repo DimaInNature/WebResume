@@ -5,7 +5,10 @@ public partial class UpdateMenuView : UserControl
     public UpdateMenuView() => InitializeComponent();
 
     private void UserButton_Click(object sender, RoutedEventArgs e) =>
-        SetFrame(source: new CreateUsersView());
+        SetFrame(source: new UpdateUsersView());
+
+    private void UserRoleButton_Click(object sender, RoutedEventArgs e) =>
+        SetFrame(source: new UpdateUsersView());
 
     private void SetFrame(ContentControl source)
     {

@@ -12,6 +12,9 @@ public partial class ReadMenuView : UserControl
 
     private void PetProjectsButton_Click(object sender, RoutedEventArgs e) { }
 
+    private void UserRoleButton_Click(object sender, RoutedEventArgs e) =>
+       SetFrame(source: new ReadUserRolesView());
+
     private void SetFrame(ContentControl source)
     {
         ArgumentNullException.ThrowIfNull(argument: source);

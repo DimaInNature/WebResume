@@ -45,6 +45,15 @@
                     Content="Users"
                     FontSize="70" />
 
+                <Button
+                    x:Name="UserRoleButton"
+                    Grid.Column="1"
+                    Margin="10,0,15,15"
+                    Background="#21262d"
+                    Click="UserRoleButton_Click"
+                    Content="User roles"
+                    FontSize="70" />
+
             </Grid>
 
         </Grid>
