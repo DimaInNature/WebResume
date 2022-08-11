@@ -22,5 +22,7 @@ public static class ViewModelsConfiguration
         services.AddTransient<ReadUserRolesViewModel>();
         services.AddTransient<UpdateUserRolesViewModel>();
         services.AddTransient<DeleteUserRolesViewModel>();
+
+        services.AddTransient<ReadPetProjectsViewModel>();
     }
 }

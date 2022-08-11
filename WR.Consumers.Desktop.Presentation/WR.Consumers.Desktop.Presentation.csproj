@@ -64,7 +64,6 @@
 
   <ItemGroup>
     <Folder Include="Content\Fonts\" />
-    <Folder Include="ViewModels\UserControls\PetProjects\" />
   </ItemGroup>
 
   <ItemGroup>
