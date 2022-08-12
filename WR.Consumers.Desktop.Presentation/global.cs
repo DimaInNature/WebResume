@@ -29,6 +29,7 @@ global using WR.Consumers.Desktop.Presentation.ViewModels.UserControls.UserRoles
 global using WR.Consumers.Desktop.Presentation.Views;
 global using WR.Consumers.Desktop.Presentation.Views.UserControls.ContactMessages;
 global using WR.Consumers.Desktop.Presentation.Views.UserControls.Menus;
+global using WR.Consumers.Desktop.Presentation.Views.UserControls.PetProjects;
 global using WR.Consumers.Desktop.Presentation.Views.UserControls.UserRoles;
 global using WR.Consumers.Desktop.Presentation.Views.UserControls.Users;
 global using ThisApplication = System.Windows.Application;
