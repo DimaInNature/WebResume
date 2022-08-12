@@ -109,6 +109,7 @@
                 Grid.Row="4"
                 Width="200"
                 Height="50"
+                Background="#21262d"
                 Command="{Binding UpdateCommand}"
                 Content="Update" />
 

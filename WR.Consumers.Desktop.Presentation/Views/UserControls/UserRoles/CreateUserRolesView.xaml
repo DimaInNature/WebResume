@@ -5,8 +5,38 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:WR.Consumers.Desktop.Presentation.Views.UserControls.UserRoles"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    d:DesignHeight="450"
+    d:DesignHeight="600"
     d:DesignWidth="800"
     mc:Ignorable="d">
-    <Grid />
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition Height="0.5*" />
+        </Grid.RowDefinitions>
+
+        <TextBox
+            Grid.Row="2"
+            Width="250"
+            Height="50"
+            HorizontalScrollBarVisibility="Auto"
+            Tag="Name"
+            Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+        <Button
+            Grid.Row="4"
+            Width="200"
+            Height="50"
+            Background="#21262d"
+            Command="{Binding CreateCommand}"
+            Content="Create" />
+
+    </Grid>
+
 </UserControl>
