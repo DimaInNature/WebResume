@@ -20,7 +20,7 @@ public sealed record class GetPetProjectListByOwnerNameQueryHandler
         var result = await sender.GetAsync<IEnumerable<PetProject>>(
             routePath: string.Format(
                 format: _configuration[key: "Routes:PetProjects:GetPetProjectListByOwnerName"],
-                arg0: _configuration[key: "User:Nickname"]),
+                arg0: "DimaInNature"),
             cancellationToken: token);
 
         return result ?? new List<PetProject>();
