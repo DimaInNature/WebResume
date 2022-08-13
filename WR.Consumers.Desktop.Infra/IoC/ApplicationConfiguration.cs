@@ -1,6 +1,6 @@
-﻿namespace WR.Consumers.Desktop.Presentation.Configurations;
+﻿namespace WR.Consumers.Desktop.Infra.IoC;
 
-internal static class ApplicationConfiguration
+public static class ApplicationConfiguration
 {
     public static void AddConfigurationFrom(this IServiceCollection services, string path)
     {

@@ -1,9 +1,7 @@
-﻿global using Microsoft.Extensions.Configuration;
-global using Microsoft.Extensions.DependencyInjection;
+﻿global using Microsoft.Extensions.DependencyInjection;
 global using Microsoft.Xaml.Behaviors;
 global using System;
 global using System.Collections.Generic;
-global using System.IO;
 global using System.Linq;
 global using System.Runtime.InteropServices;
 global using System.Security;
@@ -16,7 +14,6 @@ global using WR.Consumers.Desktop.Application.Exceptions;
 global using WR.Consumers.Desktop.Application.Extensions;
 global using WR.Consumers.Desktop.Application.Interfaces;
 global using WR.Consumers.Desktop.Domain.Core.Models;
-global using WR.Consumers.Desktop.Domain.Core.Models.Configuration;
 global using WR.Consumers.Desktop.Domain.Core.MVVM.Commands;
 global using WR.Consumers.Desktop.Domain.Core.MVVM.ViewModels;
 global using WR.Consumers.Desktop.Infra.IoC;

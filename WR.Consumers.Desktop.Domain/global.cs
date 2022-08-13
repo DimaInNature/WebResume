@@ -1,5 +1,4 @@
 ﻿global using MediatR;
-global using Microsoft.Extensions.Configuration;
 global using Microsoft.Extensions.Options;
 global using System;
 global using System.Collections.Generic;

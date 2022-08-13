@@ -1,5 +1,7 @@
 ﻿global using MediatR;
+global using Microsoft.Extensions.Configuration;
 global using Microsoft.Extensions.DependencyInjection;
+global using System.IO;
 global using System.Reflection;
 global using WR.Consumers.Desktop.Application.Interfaces;
 global using WR.Consumers.Desktop.Application.Services;
@@ -7,6 +9,7 @@ global using WR.Consumers.Desktop.Domain.Commands.ContactMessages;
 global using WR.Consumers.Desktop.Domain.Commands.UserRoles;
 global using WR.Consumers.Desktop.Domain.Commands.Users;
 global using WR.Consumers.Desktop.Domain.Core.Models;
+global using WR.Consumers.Desktop.Domain.Core.Models.Configuration;
 global using WR.Consumers.Desktop.Domain.Queries.ContactMessages;
 global using WR.Consumers.Desktop.Domain.Queries.PetProjects;
 global using WR.Consumers.Desktop.Domain.Queries.UserRoles;
