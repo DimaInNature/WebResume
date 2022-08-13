@@ -3,10 +3,10 @@
 public sealed record class DeleteUserCommandHandler
     : IRequestHandler<DeleteUserCommand>
 {
-    private readonly IConfiguration _configuration;
+    private readonly IOptions<ApplicationSettingsModel> _configuration;
 
     public DeleteUserCommandHandler(
-        IConfiguration configuration) =>
+        IOptions<ApplicationSettingsModel> configuration) =>
         _configuration = configuration;
 
     public async Task<Unit> Handle(
@@ -15,12 +15,10 @@ public sealed record class DeleteUserCommandHandler
     {
         if (Guid.Empty == request.Id) return default;
 
-        HttpSender sender = new(hostUri: _configuration[key: "Routes:Gateway"]);
+        HttpSender sender = new(hostUri: _configuration.Value.Routes.GatewayRoute);
 
         await sender.DeleteAsync(
-            routePath: string.Format(
-                format: _configuration[key: "Routes:Users:DeleteUser"],
-                arg0: request.Id),
+            routePath: _configuration.Value.Routes.Users.DeleteUser(id: request.Id),
             cancellationToken: token);
 
         return default;

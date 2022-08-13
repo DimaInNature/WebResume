@@ -2,12 +2,6 @@
 
 public partial class App : ThisApplication
 {
-    public IConfiguration Configuration { get; private set; } =
-        new ConfigurationBuilder()
-        .SetBasePath(basePath: Directory.GetCurrentDirectory())
-        .AddJsonFile(path: "appsettings.json", optional: false, reloadOnChange: true)
-        .Build();
-
     public IServiceProvider? ServiceProvider { get; private set; }
 
     protected override void OnStartup(StartupEventArgs e)
@@ -24,7 +18,7 @@ public partial class App : ThisApplication
     private void ConfigureServices(IServiceCollection services)
     {
         // Configure IConfiguration (^_^)
-        services.AddSingleton(Configuration);
+        services.AddConfigurationFrom(path: "appsettings.json");
 
         // .NET Native DI Abstraction
         services.RegisterServices();

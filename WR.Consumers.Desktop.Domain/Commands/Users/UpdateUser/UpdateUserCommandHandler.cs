@@ -3,10 +3,10 @@
 public sealed record class UpdateUserCommandHandler
     : IRequestHandler<UpdateUserCommand>
 {
-    private readonly IConfiguration _configuration;
+    private readonly IOptions<ApplicationSettingsModel> _configuration;
 
     public UpdateUserCommandHandler(
-        IConfiguration configuration) =>
+        IOptions<ApplicationSettingsModel> configuration) =>
         _configuration = configuration;
 
     public async Task<Unit> Handle(
@@ -18,10 +18,10 @@ public sealed record class UpdateUserCommandHandler
             or { Password: "" })
             return default;
 
-        HttpSender sender = new(hostUri: _configuration[key: "Routes:Gateway"]);
+        HttpSender sender = new(hostUri: _configuration.Value.Routes.GatewayRoute);
 
         await sender.PutAsync(
-            routePath: _configuration[key: "Routes:Users:UpdateUser"],
+            routePath: _configuration.Value.Routes.Users.UpdateUserRoute,
             serializableObj: request.User,
             cancellationToken: token);
 

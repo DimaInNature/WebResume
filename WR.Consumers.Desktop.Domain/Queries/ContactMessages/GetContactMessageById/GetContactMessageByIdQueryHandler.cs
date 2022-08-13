@@ -3,10 +3,10 @@
 public sealed record class GetContactMessageByIdQueryHandler
     : IRequestHandler<GetContactMessageByIdQuery, ContactMessage?>
 {
-    private readonly IConfiguration _configuration;
+    private readonly IOptions<ApplicationSettingsModel> _configuration;
 
     public GetContactMessageByIdQueryHandler(
-        IConfiguration configuration) =>
+        IOptions<ApplicationSettingsModel> configuration) =>
         _configuration = configuration;
 
     public async Task<ContactMessage?> Handle(
@@ -15,12 +15,10 @@ public sealed record class GetContactMessageByIdQueryHandler
     {
         if (Guid.Empty == request.Id) return default;
 
-        HttpSender sender = new(hostUri: _configuration[key: "Routes:Gateway"]);
+        HttpSender sender = new(hostUri: _configuration.Value.Routes.GatewayRoute);
 
         var result = await sender.GetAsync<ContactMessage>(
-            routePath: string.Format(
-                format: _configuration[key: "Routes:ContactMessages:GetContactMessageById"],
-                arg0: request.Id),
+            routePath: _configuration.Value.Routes.ContactMessages.GetContactMessageById(id: request.Id),
             cancellationToken: token);
 
         return result;

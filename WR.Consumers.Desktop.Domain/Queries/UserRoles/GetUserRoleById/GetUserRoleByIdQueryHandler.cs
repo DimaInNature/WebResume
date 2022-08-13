@@ -3,10 +3,10 @@
 public sealed record class GetUserRoleByIdQueryHandler
     : IRequestHandler<GetUserRoleByIdQuery, UserRole?>
 {
-    private readonly IConfiguration _configuration;
+    private readonly IOptions<ApplicationSettingsModel> _configuration;
 
     public GetUserRoleByIdQueryHandler(
-        IConfiguration configuration) =>
+        IOptions<ApplicationSettingsModel> configuration) =>
         _configuration = configuration;
 
     public async Task<UserRole?> Handle(
@@ -15,12 +15,10 @@ public sealed record class GetUserRoleByIdQueryHandler
     {
         if (Guid.Empty == request.Id) return default;
 
-        HttpSender sender = new(hostUri: _configuration[key: "Routes:Gateway"]);
+        HttpSender sender = new(hostUri: _configuration.Value.Routes.GatewayRoute);
 
         var result = await sender.GetAsync<UserRole>(
-            routePath: string.Format(
-                format: _configuration[key: "Routes:UserRoles:GetUserRoleById"],
-                arg0: request.Id),
+            routePath: _configuration.Value.Routes.UserRoles.GetUserRoleById(id: request.Id),
             cancellationToken: token);
 
         return result;

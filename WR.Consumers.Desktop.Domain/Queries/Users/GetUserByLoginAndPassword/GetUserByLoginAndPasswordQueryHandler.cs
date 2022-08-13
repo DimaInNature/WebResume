@@ -3,10 +3,10 @@
 public sealed record class GetUserByLoginAndPasswordQueryHandler
     : IRequestHandler<GetUserByLoginAndPasswordQuery, User?>
 {
-    private readonly IConfiguration _configuration;
+    private readonly IOptions<ApplicationSettingsModel> _configuration;
 
     public GetUserByLoginAndPasswordQueryHandler(
-        IConfiguration configuration) =>
+        IOptions<ApplicationSettingsModel> configuration) =>
         _configuration = configuration;
 
     public async Task<User?> Handle(
@@ -17,13 +17,12 @@ public sealed record class GetUserByLoginAndPasswordQueryHandler
             string.IsNullOrWhiteSpace(value: request.Password))
             return default;
 
-        HttpSender sender = new(hostUri: _configuration[key: "Routes:Gateway"]);
+        HttpSender sender = new(hostUri: _configuration.Value.Routes.GatewayRoute);
 
         var result = await sender.GetAsync<User>(
-            routePath: string.Format(
-                format: _configuration[key: "Routes:Users:GetUserByLoginAndPassword"],
-                arg0: request.Username,
-                arg1: request.Password),
+            routePath: _configuration.Value.Routes.Users.GetUserByLoginAndPassword(
+                username: request.Username,
+                password: request.Password),
             cancellationToken: token);
 
         return result;

@@ -9,7 +9,6 @@ internal sealed class ReadPetProjectsViewModel
         IPetProjectAppService petProjectAppService)
     {
         _petProjectService = petProjectAppService;
-
         Task.Run(function: () => InitializeData());
     }
 
@@ -22,13 +21,7 @@ internal sealed class ReadPetProjectsViewModel
         GeneralDataList = response.ToList();
     }
 
-    protected override void Find(string filter)
-    {
-        throw new NotImplementedException();
-    }
+    protected override void SelectGeneralValue() { }
 
-    protected override void SelectGeneralValue()
-    {
-        throw new NotImplementedException();
-    }
+    protected override void Find(string filter) { }
 }

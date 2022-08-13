@@ -3,10 +3,10 @@
 public sealed record class UpdateUserRoleCommandHandler
     : IRequestHandler<UpdateUserRoleCommand>
 {
-    private readonly IConfiguration _configuration;
+    private readonly IOptions<ApplicationSettingsModel> _configuration;
 
     public UpdateUserRoleCommandHandler(
-        IConfiguration configuration) =>
+        IOptions<ApplicationSettingsModel> configuration) =>
         _configuration = configuration;
 
     public async Task<Unit> Handle(
@@ -17,10 +17,10 @@ public sealed record class UpdateUserRoleCommandHandler
             or { Name: "" })
             return default;
 
-        HttpSender sender = new(hostUri: _configuration[key: "Routes:Gateway"]);
+        HttpSender sender = new(hostUri: _configuration.Value.Routes.GatewayRoute);
 
         await sender.PutAsync(
-            routePath: _configuration[key: "Routes:UserRoles:UpdateUserRole"],
+            routePath: _configuration.Value.Routes.UserRoles.UpdateUserRoleRoute,
             serializableObj: request.UserRole,
             cancellationToken: token);
 

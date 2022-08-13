@@ -3,10 +3,10 @@
 public sealed record class CreateUserRoleCommandHandler
     : IRequestHandler<CreateUserRoleCommand>
 {
-    private readonly IConfiguration _configuration;
+    private readonly IOptions<ApplicationSettingsModel> _configuration;
 
     public CreateUserRoleCommandHandler(
-        IConfiguration configuration) =>
+        IOptions<ApplicationSettingsModel> configuration) =>
         _configuration = configuration;
 
     public async Task<Unit> Handle(
@@ -17,10 +17,10 @@ public sealed record class CreateUserRoleCommandHandler
             or { Name: "" })
             return default;
 
-        HttpSender sender = new(hostUri: _configuration[key: "Routes:Gateway"]);
+        HttpSender sender = new(hostUri: _configuration.Value.Routes.GatewayRoute);
 
         await sender.PostAsync(
-            routePath: _configuration[key: "Routes:UserRoles:CreateUserRole"],
+            routePath: _configuration.Value.Routes.UserRoles.CreateUserRoleRoute,
             serializableObj: request.UserRole,
             cancellationToken: token);
 

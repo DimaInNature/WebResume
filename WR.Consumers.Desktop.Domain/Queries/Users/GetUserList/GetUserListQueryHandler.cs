@@ -3,20 +3,20 @@
 public sealed record class GetUserListQueryHandler
     : IRequestHandler<GetUserListQuery, IEnumerable<User>>
 {
-    private readonly IConfiguration _configuration;
+    private readonly IOptions<ApplicationSettingsModel> _configuration;
 
     public GetUserListQueryHandler(
-        IConfiguration configuration) =>
+        IOptions<ApplicationSettingsModel> configuration) =>
         _configuration = configuration;
 
     public async Task<IEnumerable<User>> Handle(
         GetUserListQuery request,
         CancellationToken token)
     {
-        HttpSender sender = new(hostUri: _configuration[key: "Routes:Gateway"]);
+        HttpSender sender = new(hostUri: _configuration.Value.Routes.GatewayRoute);
 
         var result = await sender.GetAsync<IEnumerable<User>>(
-            routePath: _configuration[key: "Routes:Users:GetUsersList"],
+            routePath: _configuration.Value.Routes.Users.GetUsersListRoute,
             cancellationToken: token);
 
         return result ?? new List<User>();

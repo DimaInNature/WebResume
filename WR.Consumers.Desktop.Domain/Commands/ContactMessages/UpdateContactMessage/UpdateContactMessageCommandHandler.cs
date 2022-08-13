@@ -3,10 +3,10 @@
 public sealed record class UpdateContactMessageCommandHandler
     : IRequestHandler<UpdateContactMessageCommand>
 {
-    private readonly IConfiguration _configuration;
+    private readonly IOptions<ApplicationSettingsModel> _configuration;
 
     public UpdateContactMessageCommandHandler(
-        IConfiguration configuration) =>
+        IOptions<ApplicationSettingsModel> configuration) =>
         _configuration = configuration;
 
     public async Task<Unit> Handle(
@@ -19,10 +19,10 @@ public sealed record class UpdateContactMessageCommandHandler
             or { SenderName: "" })
             return default;
 
-        HttpSender sender = new(hostUri: _configuration[key: "Routes:Gateway"]);
+        HttpSender sender = new(hostUri: _configuration.Value.Routes.GatewayRoute);
 
         await sender.PutAsync(
-            routePath: _configuration[key: "Routes:ContactMessages:UpdateContactMessage"],
+            routePath: _configuration.Value.Routes.ContactMessages.UpdateContactMessageRoute,
             serializableObj: request.ContactMessage,
             cancellationToken: token);
 

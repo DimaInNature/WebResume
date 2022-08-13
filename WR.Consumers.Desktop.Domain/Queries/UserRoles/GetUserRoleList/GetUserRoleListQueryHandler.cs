@@ -3,20 +3,20 @@
 public sealed record class GetUserRoleListQueryHandler
     : IRequestHandler<GetUserRoleListQuery, IEnumerable<UserRole>>
 {
-    private readonly IConfiguration _configuration;
+    private readonly IOptions<ApplicationSettingsModel> _configuration;
 
     public GetUserRoleListQueryHandler(
-        IConfiguration configuration) =>
+        IOptions<ApplicationSettingsModel> configuration) =>
         _configuration = configuration;
 
     public async Task<IEnumerable<UserRole>> Handle(
         GetUserRoleListQuery request,
         CancellationToken token)
     {
-        HttpSender sender = new(hostUri: _configuration[key: "Routes:Gateway"]);
+        HttpSender sender = new(hostUri: _configuration.Value.Routes.GatewayRoute);
 
         var result = await sender.GetAsync<IEnumerable<UserRole>>(
-            routePath: _configuration[key: "Routes:UserRoles:GetUserRolesList"],
+            routePath: _configuration.Value.Routes.UserRoles.GetUserRolesListRoute,
             cancellationToken: token);
 
         return result ?? new List<UserRole>();

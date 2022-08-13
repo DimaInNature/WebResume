@@ -3,10 +3,10 @@
 public sealed record class CreateContactMessageCommandHandler
     : IRequestHandler<CreateContactMessageCommand, ContactMessage?>
 {
-    private readonly IConfiguration _configuration;
+    private readonly IOptions<ApplicationSettingsModel> _configuration;
 
     public CreateContactMessageCommandHandler(
-        IConfiguration configuration) =>
+        IOptions<ApplicationSettingsModel> configuration) =>
         _configuration = configuration;
 
     public async Task<ContactMessage?> Handle(
@@ -19,10 +19,10 @@ public sealed record class CreateContactMessageCommandHandler
             or { SenderName: "" })
             return default;
 
-        HttpSender sender = new(hostUri: _configuration[key: "Routes:Gateway"]);
+        HttpSender sender = new(hostUri: _configuration.Value.Routes.GatewayRoute);
 
         var result = await sender.PostAndReturnAsync(
-            routePath: _configuration[key: "Routes:ContactMessages:CreateContactMessage"],
+            routePath: _configuration.Value.Routes.ContactMessages.CreateContactMessageRoute,
             serializableObj: request.ContactMessage,
             cancellationToken: token);
 

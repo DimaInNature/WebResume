@@ -16,6 +16,7 @@ global using WR.Consumers.Desktop.Application.Exceptions;
 global using WR.Consumers.Desktop.Application.Extensions;
 global using WR.Consumers.Desktop.Application.Interfaces;
 global using WR.Consumers.Desktop.Domain.Core.Models;
+global using WR.Consumers.Desktop.Domain.Core.Models.Configuration;
 global using WR.Consumers.Desktop.Domain.Core.MVVM.Commands;
 global using WR.Consumers.Desktop.Domain.Core.MVVM.ViewModels;
 global using WR.Consumers.Desktop.Infra.IoC;

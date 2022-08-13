@@ -3,10 +3,10 @@
 public sealed record class GetPetProjectListByOwnerNameQueryHandler
     : IRequestHandler<GetPetProjectListByOwnerNameQuery, IEnumerable<PetProject>>
 {
-    private readonly IConfiguration _configuration;
+    private readonly IOptions<ApplicationSettingsModel> _configuration;
 
     public GetPetProjectListByOwnerNameQueryHandler(
-        IConfiguration configuration) =>
+        IOptions<ApplicationSettingsModel> configuration) =>
         _configuration = configuration;
 
     public async Task<IEnumerable<PetProject>> Handle(
@@ -15,12 +15,10 @@ public sealed record class GetPetProjectListByOwnerNameQueryHandler
     {
         if (string.IsNullOrWhiteSpace(value: request.OwnerName)) return new List<PetProject>();
 
-        HttpSender sender = new(hostUri: _configuration[key: "Routes:Gateway"]);
+        HttpSender sender = new(hostUri: _configuration.Value.Routes.GatewayRoute);
 
         var result = await sender.GetAsync<IEnumerable<PetProject>>(
-            routePath: string.Format(
-                format: _configuration[key: "Routes:PetProjects:GetPetProjectListByOwnerName"],
-                arg0: "DimaInNature"),
+            routePath: _configuration.Value.Routes.PetProjects.GetPetProjectListByOwnerName(ownerName: "DimaInNature"),
             cancellationToken: token);
 
         return result ?? new List<PetProject>();
