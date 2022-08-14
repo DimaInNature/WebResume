@@ -49,7 +49,6 @@
                         Margin="0,2,0,0"
                         HorizontalAlignment="Right"
                         VerticalAlignment="Center"
-                        FontFamily="Microsoft YaHei UI"
                         FontSize="22"
                         Foreground="#f0f6fc"
                         Text="Web Resume" />
@@ -73,13 +72,19 @@
                     Width="200"
                     Height="50"
                     HorizontalAlignment="Left"
+                    Background="#21262d "
                     Click="HomeButton_Click"
-                    Content="../WR/Home/"
-                    FontFamily="Microsoft YaHei UI"
+                    Content="Home"
                     FontSize="15"
                     Foreground="#f0f6fc"
                     IsChecked="True"
                     Style="{StaticResource ac_MenuButtonStyle}" />
+
+                <Border
+                    Height="1"
+                    VerticalAlignment="Bottom"
+                    Background="#626569"
+                    IsHitTestVisible="False" />
 
                 <RadioButton
                     x:Name="CreateMenuButton"
@@ -87,8 +92,7 @@
                     Height="50"
                     HorizontalAlignment="Left"
                     Click="CreateButton_Click"
-                    Content="../WR/Create/"
-                    FontFamily="Microsoft YaHei UI"
+                    Content="Create"
                     FontSize="15"
                     Foreground="#f0f6fc"
                     Style="{StaticResource ac_MenuButtonStyle}" />
@@ -99,8 +103,7 @@
                     Height="50"
                     HorizontalAlignment="Left"
                     Click="ReadButton_Click"
-                    Content="../WR/Read/"
-                    FontFamily="Microsoft YaHei UI"
+                    Content="Read"
                     FontSize="15"
                     Foreground="#f0f6fc"
                     Style="{StaticResource ac_MenuButtonStyle}" />
@@ -111,8 +114,7 @@
                     Height="50"
                     HorizontalAlignment="Left"
                     Click="UpdateButton_Click"
-                    Content="../WR/Update/"
-                    FontFamily="Microsoft YaHei UI"
+                    Content="Update"
                     FontSize="15"
                     Foreground="#f0f6fc"
                     Style="{StaticResource ac_MenuButtonStyle}" />
@@ -123,11 +125,17 @@
                     Height="50"
                     HorizontalAlignment="Left"
                     Click="DeleteButton_Click"
-                    Content="..WR/Delete/"
+                    Content="Delete"
                     FontFamily="Microsoft YaHei UI"
                     FontSize="15"
                     Foreground="#f0f6fc"
                     Style="{StaticResource ac_MenuButtonStyle}" />
+
+                <Border
+                    Height="1"
+                    VerticalAlignment="Bottom"
+                    Background="#626569"
+                    IsHitTestVisible="False" />
 
                 <RadioButton
                     x:Name="LogoutMenuButton"
@@ -135,8 +143,7 @@
                     Height="50"
                     HorizontalAlignment="Left"
                     Click="LogoutMenuButton_Click"
-                    Content="cmd: /sesKill -s"
-                    FontFamily="Microsoft YaHei UI"
+                    Content="Sign out"
                     FontSize="15"
                     Foreground="#f0f6fc"
                     Style="{StaticResource ac_MenuButtonStyle}" />
@@ -156,13 +163,14 @@
                     Margin="10"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center">
+
                     <TextBlock
                         x:Name="ActiveUserNameTextBlock"
                         FontFamily="Spectral Light"
                         FontStyle="Italic"
                         FontWeight="ExtraLight" />
-                </Viewbox>
 
+                </Viewbox>
 
             </Grid>
 

@@ -110,7 +110,7 @@
                 Grid.Row="4"
                 Width="200"
                 Height="50"
-                Background="#21262d"
+                Background="#238636"
                 Command="{Binding DeleteCommand}"
                 Content="Delete" />
 

@@ -1,0 +1,136 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--#region Default-->
+
+    <Style TargetType="TextBox">
+        <Setter Property="Background" Value="White" />
+        <!--<Setter Property="BorderBrush" Value="{StaticResource BaseColorTheme}" />-->
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="FontFamily" Value="{StaticResource PrimaryFontFamily}" />
+        <Setter Property="Foreground" Value="#22202f" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="10">
+
+                        <Grid Margin="10,0,0,0">
+
+                            <ScrollViewer x:Name="PART_ContentHost" VerticalAlignment="Center" />
+
+                            <TextBlock
+                                x:Name="hint"
+                                VerticalAlignment="Center"
+                                Panel.ZIndex="-1"
+                                Background="Transparent"
+                                FontFamily="{TemplateBinding FontFamily}"
+                                FontSize="{TemplateBinding FontSize}"
+                                Foreground="Gray"
+                                IsHitTestVisible="False"
+                                Text="{TemplateBinding Tag}"
+                                TextAlignment="{TemplateBinding TextAlignment}"
+                                Visibility="Collapsed" />
+
+                        </Grid>
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Text" Value="" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="hint" Property="Visibility" Value="Visible" />
+                            <Setter Property="BorderBrush" Value="Red" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="hint" Property="Opacity" Value="0.5" />
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--#endregion-->
+
+    <!--#region Login-->
+
+    <Style x:Key="LoginTextBoxStyle" TargetType="TextBox">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="FontFamily" Value="{StaticResource PrimaryFontFamily}" />
+        <Setter Property="HorizontalScrollBarVisibility" Value="Disabled" />
+        <Setter Property="VerticalScrollBarVisibility" Value="Disabled" />
+        <Setter Property="FontSize" Value="20" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="10">
+
+                        <Grid Margin="5,0,0,0">
+
+                            <ScrollViewer x:Name="PART_ContentHost" VerticalAlignment="Center" />
+
+                            <TextBlock
+                                x:Name="hint"
+                                VerticalAlignment="Center"
+                                Panel.ZIndex="-1"
+                                Background="Transparent"
+                                FontFamily="{TemplateBinding FontFamily}"
+                                FontSize="{TemplateBinding FontSize}"
+                                IsHitTestVisible="False"
+                                Text="{TemplateBinding Tag}"
+                                TextAlignment="Center"
+                                Visibility="Collapsed" />
+
+                        </Grid>
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Text" Value="" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="hint" Property="Visibility" Value="Visible" />
+                            <Setter Property="BorderBrush" Value="Red" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="hint" Property="Opacity" Value="0.5" />
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <!--#endregion-->
+
+</ResourceDictionary>

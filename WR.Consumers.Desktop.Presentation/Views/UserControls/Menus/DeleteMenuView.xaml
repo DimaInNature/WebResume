@@ -24,10 +24,7 @@
                 Margin="25"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center">
-                <TextBlock
-                    FontFamily="Segoe UI Light"
-                    Foreground="#f0f6fc"
-                    Text="Delete" />
+                <TextBlock Foreground="#f0f6fc" Text="Delete" />
             </Viewbox>
 
             <Grid Grid.Row="1">
@@ -39,16 +36,14 @@
 
                 <Button
                     x:Name="UserButton"
-                    Margin="10,0,15,15"
-                    Background="#21262d"
+                    Margin="40,0,15,15"
                     Click="UserButton_Click"
                     Content="Users" />
 
                 <Button
                     x:Name="ContactMessages"
                     Grid.Column="1"
-                    Margin="10,0,15,15"
-                    Background="#21262d"
+                    Margin="15,0,25,15"
                     Click="ContactMessagesButton_Click"
                     Content="Contact messages" />
 
@@ -63,8 +58,7 @@
 
                 <Button
                     x:Name="UserRoleButton"
-                    Margin="10,0,15,15"
-                    Background="#21262d"
+                    Margin="40,0,15,15"
                     Click="UserRoleButton_Click"
                     Content="User roles" />
 

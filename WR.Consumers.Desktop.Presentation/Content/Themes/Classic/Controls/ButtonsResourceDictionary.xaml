@@ -1,0 +1,197 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--#region Default-->
+
+    <Style TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="{StaticResource PrimaryColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource PrimaryFontFamily}" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+
+                    <Border
+                        BorderBrush="#22272e"
+                        BorderThickness="1"
+                        ClipToBounds="False"
+                        CornerRadius="5">
+
+                        <Grid>
+
+                            <Rectangle
+                                Fill="{TemplateBinding Background}"
+                                RadiusX="4"
+                                RadiusY="4" />
+
+                            <TextBlock
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                FontFamily="{TemplateBinding FontFamily}"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                Foreground="{TemplateBinding Foreground}"
+                                Text="{TemplateBinding Content}" />
+
+                        </Grid>
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--#endregion-->
+
+    <!--#region Tool Bar-->
+
+    <!--#region Base-->
+
+    <Style x:Key="ac_ControlButtonStyle" TargetType="Button">
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Height" Value="18" />
+        <Setter Property="Width" Value="22" />
+        <Setter Property="HorizontalAlignment" Value="Right" />
+    </Style>
+
+    <!--#endregion-->
+
+    <!--#region Roll Up-->
+
+    <Style
+        x:Key="c_ControlButtonRollUpStyle"
+        BasedOn="{StaticResource ac_ControlButtonStyle}"
+        TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+
+                    <Border Background="Transparent" CornerRadius="60">
+                        <Image x:Name="Image" RenderOptions.BitmapScalingMode="LowQuality">
+                            <Image.Source>
+                                <BitmapImage
+                                    CacheOption="OnLoad"
+                                    DecodePixelHeight="200"
+                                    UriSource="/Content/Images/Controls/WindowsControlButtons/Light/Default/ControlButtonRollUp.png" />
+                            </Image.Source>
+                        </Image>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Image" Property="Source" Value="/Content/Images/Controls/WindowsControlButtons/Light/MouseEnter/ControlButtonRollUpMouseEnter.png" />
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--#endregion-->
+
+    <!--#region Maximazed-->
+
+    <Style
+        x:Key="c_ControlButtonMaximazedStyle"
+        BasedOn="{StaticResource ac_ControlButtonStyle}"
+        TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+
+                    <Border Background="Transparent" CornerRadius="60">
+                        <Image x:Name="Image" RenderOptions.BitmapScalingMode="LowQuality">
+                            <Image.Source>
+                                <BitmapImage
+                                    CacheOption="OnLoad"
+                                    DecodePixelHeight="200"
+                                    UriSource="/Content/Images/Controls/WindowsControlButtons/Light/Default/ControlButtonMaximazed.png" />
+                            </Image.Source>
+                        </Image>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Image" Property="Source" Value="/Content/Images/Controls/WindowsControlButtons/Light/MouseEnter/ControlButtonMaximazedMouseEnter.png" />
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--#endregion-->
+
+    <!--#region Close-->
+
+    <Style
+        x:Key="c_ControlButtonCloseStyle"
+        BasedOn="{StaticResource ac_ControlButtonStyle}"
+        TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+
+                    <Border Background="Transparent" CornerRadius="60">
+                        <Image x:Name="Image" RenderOptions.BitmapScalingMode="LowQuality">
+                            <Image.Source>
+                                <BitmapImage
+                                    CacheOption="OnLoad"
+                                    DecodePixelHeight="200"
+                                    UriSource="/Content/Images/Controls/WindowsControlButtons/Light/Default/ControlButtonClose.png" />
+                            </Image.Source>
+                        </Image>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Image" Property="Source" Value="/Content/Images/Controls/WindowsControlButtons/Light/MouseEnter/ControlButtonCloseMouseEnter.png" />
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--#endregion-->
+
+    <!--#endregion-->
+
+    <!--#region Menu (Small)-->
+
+    <Style x:Key="ac_SmallMenuButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="FontFamily" Value="{StaticResource PrimaryFontFamily}" />
+        <Setter Property="BorderBrush" Value="Black" />
+        <Setter Property="Margin" Value="10" />
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Margin" Value="11" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!--#endregion-->
+
+</ResourceDictionary>

@@ -8,7 +8,23 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
 
-                <ResourceDictionary Source="Content/Themes/ClassicTheme.xaml" />
+                <ResourceDictionary Source="Content/Themes/Classic/FontsResourceDictionary.xaml" />
+
+                <ResourceDictionary Source="Content/Themes/Classic/ColorsResourceDictionary.xaml" />
+
+                <ResourceDictionary Source="Content/Themes/Classic/Controls/ButtonsResourceDictionary.xaml" />
+
+                <ResourceDictionary Source="Content/Themes/Classic/Controls/RadioButtonsResourceDictionary.xaml" />
+
+                <ResourceDictionary Source="Content/Themes/Classic/Controls/TextBoxesResourceDictionary.xaml" />
+
+                <ResourceDictionary Source="Content/Themes/Classic/Controls/ComboBoxesResourceDictionary.xaml" />
+
+                <ResourceDictionary Source="Content/Themes/Classic/Controls/DatePickersResourceDictionary.xaml" />
+
+                <ResourceDictionary Source="Content/Themes/Classic/Controls/TextBlocksResourceDictionary.xaml" />
+
+                <ResourceDictionary Source="Content/Themes/Classic/Controls/PasswordBoxesResourceDictionary.xaml" />
 
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

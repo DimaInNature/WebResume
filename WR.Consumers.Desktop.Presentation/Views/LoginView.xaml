@@ -144,20 +144,15 @@
                 </I:Interaction.Behaviors>
             </Image>
 
-            <Grid
-                Grid.Row="0"
-                Background="{StaticResource BaseColorBackground}"
-                Opacity="0.85">
+            <Grid Grid.Row="0" Background="#161b22">
 
                 <TextBlock
                     Margin="0,2,0,0"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
-                    FontFamily="Spectral Light"
                     FontSize="22"
-                    FontStyle="Italic"
-                    Foreground="{StaticResource LogoBackground}"
-                    Text="(pet) Web Resume" />
+                    Foreground="White"
+                    Text="Web Resume" />
 
                 <Button
                     x:Name="RollUpButton"
@@ -198,7 +193,6 @@
                 <Grid
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
-                    parallax:ParallaxEffect.IsBackground="True"
                     parallax:ParallaxEffect.Parent="{Binding ElementName=ThisWindow}"
                     parallax:ParallaxEffect.XOffset="80"
                     parallax:ParallaxEffect.YOffset="80">
@@ -208,8 +202,7 @@
                     </I:Interaction.Behaviors>
 
                     <TextBlock
-                        FontFamily="Segoe UI Light"
-                        FontSize="30"
+                        FontSize="26"
                         Foreground="White"
                         TextAlignment="Center">
                         <Run Text="Welcome" /><LineBreak />
@@ -261,7 +254,7 @@
                         Width="250"
                         Height="2"
                         VerticalAlignment="Bottom"
-                        Background="#f2745f"
+                        Background="White"
                         IsHitTestVisible="False" />
 
                     <PasswordBox
@@ -320,7 +313,7 @@
                         Width="250"
                         Height="2"
                         VerticalAlignment="Bottom"
-                        Background="#f2745f"
+                        Background="White"
                         IsHitTestVisible="False" />
 
                     <Button
@@ -335,8 +328,7 @@
                         Click="EnterButton_Click"
                         Command="{Binding LoginCommand}"
                         CommandParameter="{Binding ElementName=ThisWindow}"
-                        Content="Log In"
-                        Opacity="0.85" />
+                        Content="Login" />
 
                     <Button
                         x:Name="RegisterButton"
@@ -347,11 +339,11 @@
                         Height="37"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Bottom"
+                        Background="#238636"
                         Click="RegisterButton_Click"
                         Command="{Binding RegistrationCommand}"
                         CommandParameter="{Binding ElementName=ThisWindow}"
-                        Content="Register"
-                        Opacity="0.85" />
+                        Content="Register" />
 
                 </Grid>
 
