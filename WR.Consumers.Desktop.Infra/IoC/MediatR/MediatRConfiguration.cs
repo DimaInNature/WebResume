@@ -15,5 +15,7 @@ public static class MediatRConfiguration
         services.AddPetProjectMediatRProfile();
 
         services.AddContactMessageMediatRProfile();
+
+        services.AddAuthMediatRProfile();
     }
 }

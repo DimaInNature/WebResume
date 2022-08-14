@@ -6,4 +6,6 @@ global using System.Threading;
 global using System.Threading.Tasks;
 global using WR.Consumers.Desktop.Domain.Core.Models;
 global using WR.Consumers.Desktop.Domain.Core.Models.Configuration;
+global using WR.Consumers.Desktop.Domain.Core.Models.Requests;
+global using WR.Shared.Domain.Features;
 global using WR.Shared.Domain.Network;

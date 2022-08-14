@@ -5,6 +5,7 @@ global using System.IO;
 global using System.Reflection;
 global using WR.Consumers.Desktop.Application.Interfaces;
 global using WR.Consumers.Desktop.Application.Services;
+global using WR.Consumers.Desktop.Domain.Commands.Auth;
 global using WR.Consumers.Desktop.Domain.Commands.ContactMessages;
 global using WR.Consumers.Desktop.Domain.Commands.UserRoles;
 global using WR.Consumers.Desktop.Domain.Commands.Users;

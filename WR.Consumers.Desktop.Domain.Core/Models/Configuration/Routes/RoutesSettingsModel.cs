@@ -4,6 +4,8 @@ public class RoutesSettingsModel
 {
     public string GatewayRoute { get; set; } = string.Empty;
 
+    public string AuthenticationRoute { get; set; } = string.Empty;
+
     public ContactMessageRoutesSettingsModel ContactMessages { get; set; } = new();
 
     public PetProjectRoutesSettingsModel PetProjects { get; set; } = new();

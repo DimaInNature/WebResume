@@ -60,7 +60,7 @@ public class HttpSender
                 encoding: Encoding.UTF8,
                 mediaType: "application/json"));
     }
-    
+
     public async Task PostAsync<TRequest>(string routePath,
        TRequest serializableObj, CancellationToken cancellationToken)
     {
@@ -73,6 +73,23 @@ public class HttpSender
                 encoding: Encoding.UTF8,
                 mediaType: "application/json"),
             cancellationToken: cancellationToken);
+    }
+
+    public async Task<TResponse?> PostAndReturnAsync<TRequest, TResponse>(
+        string routePath, TRequest serializableObj,
+        CancellationToken cancellationToken)
+    {
+        using var httpClient = new HttpClient();
+
+        using var response = await httpClient.PostAsync(
+            requestUri: $"{_hostUri}/{routePath}",
+           content: new StringContent(
+                content: Serialize(obj: serializableObj),
+                encoding: Encoding.UTF8,
+                mediaType: "application/json"),
+        cancellationToken: cancellationToken);
+
+        return await Deserialize<TResponse>(responseMessage: response);
     }
 
     public async Task<T?> PostAndReturnAsync<T>(

@@ -4,10 +4,11 @@ public static class DependencyInjectionConfiguration
 {
     public static void RegisterServices(this IServiceCollection services)
     {
-        if (services is null)
-            throw new ArgumentNullException(paramName: nameof(services));
+        ArgumentNullException.ThrowIfNull(argument: nameof(services));
 
-        services.AddTransient<IAuthenticationAppService, AuthenticationAppService>();
+        services.AddSingleton<UserSessionService>();
+
+        services.AddTransient<IAuthenticationAppService, JWTAuthenticationAppService>();
 
         services.AddTransient<IUserAppService, UserAppService>();
 

@@ -2,5 +2,5 @@
 
 public interface IAuthenticationAppService
 {
-    public bool Login(string username, string password);
+    public Task<string?> Authorize(string username, string password);
 }
