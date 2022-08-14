@@ -36,8 +36,8 @@ public sealed class UserServiceDbContext : DbContext
         new()
         {
             Id = Guid.NewGuid(),
-            Username = "Admin",
-            Password = "123456",
+            Username = "DimaInNature",
+            Password = "Root",
             UserRoleId = Guid.Parse(input: "{81FBD858-81B3-46E1-9AB1-4109C4BE38D9}")
         }
     };
