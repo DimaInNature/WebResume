@@ -12,7 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="IoC\MediatR\Profiles\" />
+    <ProjectReference Include="..\WR.Microservices.AuthenticationService.Application\WR.Microservices.AuthenticationService.Application.csproj" />
+    <ProjectReference Include="..\WR.Microservices.AuthenticationService.Domain\WR.Microservices.AuthenticationService.Domain.csproj" />
   </ItemGroup>
 
 </Project>

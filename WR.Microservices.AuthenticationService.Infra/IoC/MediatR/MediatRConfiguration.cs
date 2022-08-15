@@ -7,5 +7,7 @@ public static class MediatRConfiguration
         ArgumentNullException.ThrowIfNull(argument: services);
 
         services.AddMediatR(assemblies: Assembly.GetExecutingAssembly());
+
+        services.AddUserMediatRProfile();
     }
 }

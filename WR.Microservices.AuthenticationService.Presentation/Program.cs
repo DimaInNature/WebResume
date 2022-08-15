@@ -1,15 +1,19 @@
 var builder = WebApplication.CreateBuilder(args);
 
+IConfiguration configuration = builder.Configuration;
+
 RegisterServices(services: builder.Services);
 
 var app = builder.Build();
 
-Configure(app: app);
+Configure(app);
 
 app.Run();
 
 void RegisterServices(IServiceCollection services)
 {
+    services.Configure<ApplicationSettingsModel>(configuration);
+
     // Jwt Auth
     services.AddAuthentication(builder);
 

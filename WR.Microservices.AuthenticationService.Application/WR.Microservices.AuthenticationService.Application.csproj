@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\WR.Microservices.AuthenticationService.Domain\WR.Microservices.AuthenticationService.Domain.csproj" />
     <ProjectReference Include="..\WR.Microservices.AuthenticationServices.Domain.Core\WR.Microservices.AuthenticationServices.Domain.Core.csproj" />
   </ItemGroup>
 
