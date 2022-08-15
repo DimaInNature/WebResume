@@ -8,11 +8,11 @@ public class UserSessionService
 
     private readonly IUserAppService _userService;
 
-    private readonly JWTAuthenticationAppService _authorizationService;
+    private readonly IAuthenticationAppService _authorizationService;
 
     public UserSessionService(
         IUserAppService userService,
-        JWTAuthenticationAppService authorizationService) =>
+        IAuthenticationAppService authorizationService) =>
         (_userService, _authorizationService) = (userService, authorizationService);
 
     public User? ActiveUser

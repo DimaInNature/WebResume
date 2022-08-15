@@ -4,6 +4,8 @@ internal sealed class LoginViewModel : BaseViewModel
 {
     private readonly IUserAppService _userAppService;
 
+    private readonly UserSessionService _userSessionService;
+
     #region Acessors
 
     public ICommand? LoginCommand { get; private set; }
@@ -99,9 +101,11 @@ internal sealed class LoginViewModel : BaseViewModel
 
     public bool IsConnectionStopped = false;
 
-    public LoginViewModel(IUserAppService userAppService)
+    public LoginViewModel(
+        IUserAppService userAppService,
+        UserSessionService userSessionService)
     {
-        _userAppService = userAppService;
+        (_userAppService, _userSessionService) = (userAppService, userSessionService);
 
         InitializationCommands();
     }
@@ -136,6 +140,8 @@ internal sealed class LoginViewModel : BaseViewModel
             return;
         }
 
+        await _userSessionService.StartSession(activeUser: user);
+
         new MainView().Show();
 
         (obj as Window)?.Close();
@@ -169,6 +175,8 @@ internal sealed class LoginViewModel : BaseViewModel
         }
 
         IsConnectionStopped = true;
+
+        await _userSessionService.StartSession(activeUser: user);
 
         (obj as MainView)?.Show();
 

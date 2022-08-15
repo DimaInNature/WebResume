@@ -123,6 +123,13 @@ public class HttpSender
                 mediaType: "application/json"),
         cancellationToken: cancellationToken);
 
+        if (typeof(TResponse) == typeof(string))
+        {
+            string strRequest = await response.Content.ReadAsStringAsync(cancellationToken);
+
+            return (TResponse)(object)strRequest;
+        }
+            
         return await Deserialize<TResponse>(responseMessage: response);
     }
 
