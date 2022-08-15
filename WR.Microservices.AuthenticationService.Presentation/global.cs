@@ -1,1 +1,17 @@
-﻿
+﻿global using Microsoft.AspNetCore.Authentication.JwtBearer;
+global using Microsoft.AspNetCore.Authorization;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.Extensions.Options;
+global using Microsoft.IdentityModel.Tokens;
+global using Microsoft.OpenApi.Models;
+global using System.IdentityModel.Tokens.Jwt;
+global using System.Reflection;
+global using System.Security.Claims;
+global using System.Text;
+global using WR.Microservices.AuthenticationService.Application.Interfaces;
+global using WR.Microservices.AuthenticationService.Infra.IoC;
+global using WR.Microservices.AuthenticationService.Infra.IoC.MediatR;
+global using WR.Microservices.AuthenticationService.Presentation.Configurations;
+global using WR.Microservices.AuthenticationServices.Domain.Core.Models;
+global using WR.Microservices.AuthenticationServices.Domain.Core.Models.Configuration;
+global using WR.Microservices.AuthenticationServices.Domain.Core.Models.Requests;

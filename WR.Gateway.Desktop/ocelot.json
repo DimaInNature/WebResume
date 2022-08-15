@@ -76,7 +76,11 @@
       ],
       "UpstreamPathTemplate": "/Users",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
-      "FileCacheOptions": { "TtlSeconds": 30 }
+      "FileCacheOptions": { "TtlSeconds": 30 },
+      "AuthenticationOptions": {
+        "AllowedScopes": ["Post"],
+        "AuthenticationProviderKey": "Bearer"
+      }
     },
     {
       "DownstreamPathTemplate": "/Users/{id}",
