@@ -95,19 +95,31 @@
       "UpstreamHttpMethod": [ "Get", "Delete" ],
       "FileCacheOptions": { "TtlSeconds": 30 }
     },
-    {
+   {
       "DownstreamPathTemplate": "/Users/{login}/{password}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 7294
-        }
+         {
+            "Host": "localhost",
+            "Port": 7294
+         }
       ],
       "UpstreamPathTemplate": "/Users/{login}/{password}",
       "UpstreamHttpMethod": [ "Get" ],
       "FileCacheOptions": { "TtlSeconds": 30 }
-    }
+   },
+   {
+      "DownstreamPathTemplate": "/Auth/Login",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7218
+        }
+      ],
+      "UpstreamPathTemplate": "Auth/Login",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
   ],
   "GlobalConfiguration": {
     "BaseUrl": "https://localhost:5001"

@@ -13,8 +13,7 @@ public class AuthController : ControllerBase
         IUserAppService userService) =>
         (_configuration, _userService) = (configuration, userService);
 
-    [AllowAnonymous]
-    [Route(template: "")]
+    [Route(template: "Login")]
     [HttpPost]
     public async Task<IActionResult> Login([FromBody] AuthorizationRequest authRequest)
     {
